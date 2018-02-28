@@ -1,0 +1,18 @@
+<md-toolbar class="md-primary md-medium">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Logos</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showLogos()">
+			<ng-md-icon ng-show="logos_visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="logos_visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="logos_visibility" class="md-whiteframe-4dp myform" flex layout-padding>	
+	<div ng-repeat="logo in active_file.header.logos">
+		<my-logo my-element="logo" action="deleteElement(active_file.header.logos,$index)"></my-logo>
+	</div>
+	<div align="right">
+		<md-button class="md-raised md-primary" ng-click="addLogo()">Add</md-button>
+	</div>
+</md-content>
+<br>	

@@ -1,0 +1,50 @@
+<div data-ng-init="fillFileList()"></div>
+
+<mdt-table 	table-card="{visible: true, title: 'Project List'}"
+            paginated-rows="{isEnabled: true, rowsPerPageValues: [10,20,50]}"
+			animate-sort-icon="true"
+            mdt-row="{
+				data: file_list,
+				'table-row-id-key': 'file_id',
+				'column-keys': [
+					'file_id',
+					'owner',
+					'filename',
+					'creation_date',
+					'modify_date',
+					'open',
+					'download',
+					'preview',
+					'delete'
+				]
+			}">
+    <mdt-header-row>  
+		<mdt-column align-rule="left" column-sort="false">ID</mdt-column>
+		<mdt-column align-rule="left" column-sort="false">User</mdt-column>
+		<mdt-column align-rule="left" column-sort="false">Filename</mdt-column>
+		<mdt-column align-rule="left" column-sort="false">Creation Date</mdt-column>
+		<mdt-column align-rule="left" column-sort="false">Modify Date</mdt-column>
+		<mdt-column align-rule="left">Open</mdt-column>
+		<mdt-column align-rule="left">Download</mdt-column>
+		<mdt-column align-rule="left">Preview</mdt-column>
+		<mdt-column align-rule="center">Delete</mdt-column>
+    </mdt-header-row>
+	
+	<!-- Custom Field -->
+	<mdt-custom-cell column-key="open">
+        <mdt-custom-cell-button-open ng-click="clientScope.openFile(rowId)"></md-button>	
+	</mdt-custom-cell>
+	
+	<mdt-custom-cell column-key="download">
+        <mdt-custom-cell-button-download ng-click="clientScope.downloadFile(rowId)"></md-button>	
+	</mdt-custom-cell>
+	
+	<mdt-custom-cell column-key=preview>
+        <mdt-custom-cell-button-preview ng-click="clientScope.launchDemo(rowId)"></md-button>	
+	</mdt-custom-cell>
+	
+	<mdt-custom-cell column-key="delete" html-content="true">
+	    <mdt-custom-cell-button-delete ng-click="clientScope.deleteFile(rowId)"></md-button>
+	</mdt-custom-cell>
+</mdt-table>
+

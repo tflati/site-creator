@@ -1,0 +1,36 @@
+<md-toolbar layout="row">
+	<div class="md-toolbar-tools">
+		<md-button class="menu" ng-click="toggleLeft()">
+			<ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
+		</md-button>
+		<h2 flex md-truncate>
+			<span>{{info.header.title}}</span>
+		</h2>
+	</div>
+</md-toolbar>
+
+<md-sidenav class="md-sidenav-left" md-component-id="leftE" md-whiteframe="4">
+	<md-toolbar layout="row">
+		<div class="md-toolbar-tools">
+			<md-button class="menu" ng-click="toggleLeft()">
+				<ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
+			</md-button>
+			<h2>Menu</h2>
+		</div>
+	</md-toolbar>
+
+	<md-sidemenu locked="true">
+		<div ng-repeat="item in info.menu.elements">
+			<div ng-if="item.submenu.length > 0">
+				<md-sidemenu-content md-heading="{{item.name}}" md-arrow="true">
+					<div ng-repeat="subitem in item.submenu">
+						<md-sidemenu-button ng-click="goTo(subitem.url);toggleLeft();">{{subitem.name}}</md-sidemenu-button>
+					</div>
+				</md-sidemenu-content>
+			</div>
+			<div ng-if="item.submenu.length == 0">
+				<md-sidemenu-button ng-click="goTo(item.url);toggleLeft();">{{item.name}}</md-sidemenu-button>
+			</div>			
+		</div>
+	</md-sidemenu>
+</md-sidenav>

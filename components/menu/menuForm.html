@@ -1,0 +1,74 @@
+<md-toolbar class="md-accent">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Menu</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showMenu()">
+			<ng-md-icon ng-show="menu_visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="menu_visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="menu_visibility" class="md-whiteframe-4dp myform" flex layout-padding>	
+	<md-input-container class="md-block" flex-gt-sm>
+			<label>Type</label>
+			<md-select name="type" ng-model="active_file.menu.type">
+				<md-option value="menu_bar">Menu bar</md-option>
+				<md-option value="sidenav_menu">Sidenav menu</md-option>
+			</md-select>
+		</md-input-container>
+	<div ng-repeat="item in active_file.menu.elements">
+		<!-- MENU ITEM -->
+		<md-card md-theme="default" md-theme-watch>
+			<md-toolbar class="md-primary">
+				<div class="md-toolbar-tools">
+					<h2 flex md-truncate>Item {{$index +1}}: {{item.name}}</h2>
+					<md-button class="md-icon-button" aria-label="Favorite" ng-click="showDeleteDialog('Are you sure to delete the item ' + item.name + '?',active_file.menu.elements,$index)">	
+						<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+					</md-button>
+				</div>
+			</md-toolbar>
+			<md-card-content>
+				<div layout-gt-sm="row">
+					<md-input-container class="md-block" flex-gt-sm>
+						<label>Name</label>
+						<input ng-model="item.name">
+					</md-input-container>
+					<md-input-container class="md-block" flex-gt-sm>
+						<label>Url</label>
+						<input ng-model="item.url">
+					</md-input-container>
+				</div>
+				<md-switch ng-model="submenu">
+					Submenu?
+				</md-switch>
+				
+				<!-- SUB MENU -->
+				<div ng-show="submenu == true">
+					<br>
+					Submenu:
+					<div ng-repeat="subitem in item.submenu">
+						<div layout-gt-sm="row">
+							<md-input-container class="md-block" flex-gt-sm>
+								<label>Name</label>
+								<input ng-model="subitem.name">
+							</md-input-container>
+							<md-input-container class="md-block" flex-gt-sm>
+								<label>Url</label>
+								<input ng-model="subitem.url">
+							</md-input-container>
+							<md-button class="md-icon-button md-accent" aria-label="Delete" ng-click="deleteElement(item.submenu,$index)">
+								<ng-md-icon icon="delete" style="fill: #E91E63" size="20"></ng-md-icon> 
+							</md-button>
+						</div>
+					</div>
+					<div align="right">
+						<md-button class="md-raised md-primary" ng-click="addMenuSubItem($index)">Add Subitem</md-button>
+					</div>
+				</div>
+			</md-card-content>
+		</md-card>		
+	</div>
+	<div align="right">
+		<md-button class="md-raised md-accent" ng-click="addMenuItem()">Add Item</md-button>
+	</div>
+</md-content>
+<br>	

@@ -1,0 +1,26 @@
+[
+    {
+        "file_id": "1",
+        "filename": "test1",
+        "creation_date": "2017-05-31 20:08",
+        "modify_date": "2018-01-15 21:04",
+        "owner": "Francesco Maggi",
+        "user_name": "Francesco Maggi"
+    },
+    {
+        "file_id": "2",
+        "filename": "peach",
+        "creation_date": "2017-11-06 19:34",
+        "modify_date": "2018-01-25 17:35",
+        "owner": "Francesco Maggi",
+        "user_name": "Francesco Maggi"
+    },
+    {
+        "file_id": "3",
+        "filename": "bufalo",
+        "creation_date": "2018-02-19 17:12",
+        "modify_date": "2018-02-20 18:11",
+        "owner": "Tiziano Flati",
+        "user_name": "Tiziano Flati"
+    }
+]

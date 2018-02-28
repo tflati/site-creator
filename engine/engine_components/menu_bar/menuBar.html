@@ -1,0 +1,17 @@
+<md-toolbar>
+	<div layout="row">
+		<div>
+			<md-menu-bar> 
+				<md-menu ng-repeat="item in info.menu.elements">
+					<button ng-click="item.submenu.length ? $mdMenu.open() : goTo(item.url)">{{item.name}}</button>
+					
+					<md-menu-content ng-show="item.submenu.length > 0"> 
+						<md-menu-item ng-repeat="subitem in item.submenu">
+							<md-button	ng-click="goTo(subitem.url);toggleLeft();"> {{subitem.name}} </md-button> 
+						</md-menu-item>
+					</md-menu-content>
+				</md-menu> 
+			</md-menu-bar>
+		</div>
+	</div>
+</md-tollbar>

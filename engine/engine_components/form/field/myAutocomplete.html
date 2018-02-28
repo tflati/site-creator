@@ -1,0 +1,41 @@
+<md-autocomplete flex ng-if="myElement.required" required
+	ng-disabled = "isDisabled"
+	md-no-cache = "false"
+	md-selected-item = "selectedItem"
+	md-search-text = "searchText"
+	md-selected-item-change = "selectedItemChange(item)"
+	md-items = "item in querySearch(searchText)"
+	md-item-text = "item.name"
+	md-min-length = "0"
+	placeholder = "{{myElement.label}} *">
+  
+	<md-item-template>
+		<span md-highlight-text = "searchText"
+			md-highlight-flags = "^i">{{item.name}}</span>
+	</md-item-template>
+  
+	<md-not-found>
+		No matching for "{{searchText}}" were found.
+	</md-not-found>
+</md-autocomplete>
+
+<md-autocomplete flex ng-if="!myElement.required"
+	ng-disabled = "isDisabled"
+	md-no-cache = "false"
+	md-selected-item = "selectedItem"
+	md-search-text = "searchText"
+	md-selected-item-change = "selectedItemChange(item)"
+	md-items = "item in querySearch(searchText)"
+	md-item-text = "item.name"
+	md-min-length = "0"
+	placeholder = "{{myElement.label}}">
+  
+	<md-item-template>
+		<span md-highlight-text = "searchText"
+			md-highlight-flags = "^i">{{item.name}}</span>
+	</md-item-template>
+  
+	<md-not-found>
+		No matching for "{{searchText}}" were found.
+	</md-not-found>
+</md-autocomplete>

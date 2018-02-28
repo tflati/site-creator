@@ -1,0 +1,198 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "id",
+				"tooltip": "id",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": false
+			},
+			{
+				"label": "Anno",
+				"tooltip": "Anno",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "Chemestry",
+				"tooltip": "Chemestry",
+				"filters": {
+					"title": "Chose a name:",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "Economy",
+				"tooltip": "Economy",
+				"filters": {
+					"title": "Chose a name:",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "Computer science",
+				"tooltip": "Computer science",
+				"filters": {
+					"title": "Chose a name:",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "4",
+	"hits": [
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			],
+		    "Anno": [
+				{
+					"type": "text",
+					"label": "2014",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Chemestry": [
+				{
+					"type": "number",
+					"value": "400"
+				}
+			],
+			"Economy": [
+				{
+					"type": "number",
+					"value": "550"
+				}
+			],
+			"Computer science": [
+				{
+					"type": "number",
+					"value": "350"
+				}
+			]
+		},
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			],
+		    "Anno": [
+				{
+					"type": "text",
+					"label": "2015",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Chemestry": [
+				{
+					"type": "number",
+					"value": "320"
+				}
+			],
+			"Economy": [
+				{
+					"type": "number",
+					"value": "600"
+				}
+			],
+			"Computer science": [
+				{
+					"type": "number",
+					"value": "400"
+				}
+			]
+		},
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			],
+		    "Anno": [
+				{
+					"type": "text",
+					"label": "2016",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Chemestry": [
+				{
+					"type": "number",
+					"value": "400"
+				}
+			],
+			"Economy": [
+				{
+					"type": "number",
+					"value": "400"
+				}
+			],
+			"Computer science": [
+				{
+					"type": "number",
+					"value": "250"
+				}
+			]
+		},
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			],
+		    "Anno": [
+				{
+					"type": "text",
+					"label": "2017",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Chemestry": [
+				{
+					"type": "number",
+					"value": "200"
+				}
+			],
+			"Economy": [
+				{
+					"type": "number",
+					"value": "400"
+				}
+			],
+			"Computer science": [
+				{
+					"type": "number",
+					"value": "300"
+				}
+			]
+		}
+	]
+}

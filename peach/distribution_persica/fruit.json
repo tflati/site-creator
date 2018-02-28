@@ -1,0 +1,83 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "color",
+				"header": "Color",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "color": [
+				{
+					"type": "text",
+					"label": "Yellow",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "42"
+				}
+			]
+		},
+		{
+		    "color": [
+				{
+					"type": "text",
+					"label": "White",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "77"
+				}
+			]
+		},
+		{
+		    "color": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "5"
+				}
+			]
+		}
+	]
+}

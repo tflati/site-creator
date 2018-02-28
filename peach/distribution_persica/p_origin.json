@@ -1,0 +1,1073 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "origin",
+				"header": "Origin",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "58",
+	"hits": [
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Henan, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "10"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, edible, Shanghai, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from mutation, Guangxi, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Anhui, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, Henan, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Ornamental, Hebei, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "6"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, Xinjiang, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Semidwarf selection",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Cresthaven, x Flamecrest",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Panamint x Fla.R9T10",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from crosses, USA",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, Shanghai, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Shanghai, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Sunred x (Okinawa x Hiland) op.",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Guangdong, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Shandong, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "5"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety fromn crosses, Jiangsu, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Stark Redgold x Flamekist",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from crosses, Liaoning, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Guangxi, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landraces, Shandong, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Breeding",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Guizhou, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Gansu, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Guangxi, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, Beijing, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Ornamental, Henan, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Diamante op.",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Shanxi, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Yamato-Wase x Nunome-Wase",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Nishiki x Fortuna",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Xinjiang, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Jiangsu, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from crosses, Italy",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Seeding, France",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Ornamental, Beijing, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Tianjin, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, Yunnan, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Hubei, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Beijing, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, edible, Shandong, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "India",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from crosses, Henan, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "13"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, Jilin, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from mutation, Henan, CHina",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "5"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Landrace, Taiwan, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "(Da30-13 self) x G$=-5E",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Chance seedling",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Zhejiang, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Hebei, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Japana",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Variety from crosses, Canada",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from crosses, Shaanxi, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from crosses, Beijing, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "USA",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Improved variety from mutation, Anhui, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,211 @@
+<h2>Demo, file: {{fileName}}.json</h2>
+<div ng-if="load_error"> <!-- show only if file is not load-->
+	<font color="#F44336">Impossible to execute the configuration file...</font>
+	<br>
+	<p>Error:<br>{{load_error_text}}</p>
+</div>
+
+<md-content id="demo_content" class="md-whiteframe-4dp" md-theme="demo" md-theme-watch="true">
+	<div ng-if="!load_error"> <!-- show only if file is load-->
+		<!-- MENU -->
+		<div ng-switch="info.menu.type">
+			<div ng-switch-when="menu_bar">
+				<my-menu-bar></my-menu-bar> 
+			</div>				
+			<div ng-switch-when="sidenav_menu">
+				<my-sidenav-menu></my-sidenav-menu> 
+			</div>
+		</div>
+		
+		<!-- HEADER -->
+		<my-engine-header></my-engine-header> 
+
+		<!-- BODY -->
+		<div ng-repeat="elemL in active_page_layout" style="width:80%; margin-left: auto; margin-right: auto;">
+			<div ng-include="elemL.type + 'L.html'"></div>
+		</div>
+		
+		<!-- FOOTER -->
+		<my-engine-footer></my-engine-footer> 
+	</div>
+</md-content>
+<br><br>
+
+<!-- layout item with card -->
+<script type="text/ng-template" id="itemL.html">
+	<div ng-include="getElemTypeById(elemL.id) + 'L.html'"></div> <!-- generic item, load the specific html for the type of element -->
+</script>
+
+<script type="text/ng-template" id="button_groupL.html">
+	<md-card>
+		<my-button-group-element my-element="getElemObjById(elemL.id)" ></my-button-group-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="imageL.html">
+	<md-card>
+		<my-image-element my-element="getElemObjById(elemL.id)"></my-image-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="iframeL.html">
+	<md-card>
+		<my-i-frame-element my-element="getElemObjById(elemL.id)"></my-i-frame-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="datatableL.html">
+	<md-card>
+		<my-table-element my-element="getElemObjById(elemL.id)"></my-table-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="formL.html">
+	<md-card>
+		<my-form-element my-element="getElemObjById(elemL.id)"></my-form-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="chartL.html">
+	<md-card>
+		<my-chart-element my-element="getElemObjById(elemL.id)" ></my-chart-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="textL.html">
+	<md-card>
+		<my-text-element my-element="getElemObjById(elemL.id)"></my-text-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="sliderL.html">
+	<md-card>
+		<my-slider-element my-element="getElemObjById(elemL.id)"></my-slider-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="customlistL.html">
+	<md-card>
+		<my-list-element my-element="getElemObjById(elemL.id)"></my-list-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="vennL.html">
+	<md-card>
+		<my-venn-element my-element="getElemObjById(elemL.id)"></my-venn-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="wordcloudL.html">
+	<md-card>
+		<my-word-cloud-element my-element="getElemObjById(elemL.id)"></my-word-cloud-element>
+	</md-card>
+</script>
+
+<script type="text/ng-template" id="ptreeL.html">
+	<md-card>
+		<my-p-tree-element my-element="getElemObjById(elemL.id)"></my-p-tree-element>
+	</md-card>
+</script>
+
+<!-- layout container -->
+<script type="text/ng-template" id="containerL.html">
+	<div layout="row" layout-xs="column" layout-wrap>
+		<div ng-repeat="column in elemL.columns">
+			<div ng-repeat="elemL in column">
+				<div ng-include= "elemL.type + 'L.html'"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- group of element container -->
+<script type="text/ng-template" id="groupL.html">
+	<md-card>
+		<div layout="row" layout-xs="column" layout-wrap>
+			<div ng-repeat="column in elemL.columns">
+				<div ng-repeat="elemL in column">
+					<div ng-if="elemL.type != group" ng-include= "elemL.type + 'LG.html'"></div>
+				</div>
+			</div>
+		</div>
+	</md-card>
+</script>
+
+<!-- layout item without card -->
+<script type="text/ng-template" id="itemLG.html">
+	<div ng-include="getElemTypeById(elemL.id) + 'LG.html'"></div> <!-- generic item, load the specific html for the type of element -->
+</script>
+
+<script type="text/ng-template" id="button_groupLG.html">
+	<my-button-group-element my-element="getElemObjById(elemL.id)"></my-button-group-element>
+</script>
+
+<script type="text/ng-template" id="imageLG.html">
+	<my-image-element my-element="getElemObjById(elemL.id)"></my-image-element>
+</script>
+
+<script type="text/ng-template" id="iframeLG.html">
+	<my-i-frame-element my-element="getElemObjById(elemL.id)"></my-i-frame-element>
+</script>
+
+<script type="text/ng-template" id="datatableLG.html">
+	<my-table-element my-element="getElemObjById(elemL.id)"></my-table-element>
+</script>
+
+<script type="text/ng-template" id="formLG.html">
+	<my-form-element my-element="getElemObjById(elemL.id)"></my-form-element>
+</script>
+
+<script type="text/ng-template" id="chartLG.html">
+	<my-chart-element my-element="getElemObjById(elemL.id)"></my-chart-element>
+</script>
+
+<script type="text/ng-template" id="textLG.html">
+	<my-text-element my-element="getElemObjById(elemL.id)"></my-text-element>
+</script>
+
+<script type="text/ng-template" id="sliderLG.html">
+	<my-slider-element my-element="getElemObjById(elemL.id)"></my-slider-element>
+</script>
+
+<script type="text/ng-template" id="customlistLG.html">
+	<my-list-element my-element="getElemObjById(elemL.id)"></my-list-element>
+</script>
+
+<script type="text/ng-template" id="vennLG.html">
+	<my-venn-element my-element="getElemObjById(elemL.id)"></my-venn-element>
+</script>
+
+<script type="text/ng-template" id="wordcloudLG.html">
+	<my-word-cloud-element my-element="getElemObjById(elemL.id)"></my-word-cloud-element>
+</script>
+
+<script type="text/ng-template" id="ptreeLG.html">
+	<my-p-tree-element my-element="getElemObjById(elemL.id)"></my-p-tree-element>
+</script>
+
+<!-- layout container -->
+<script type="text/ng-template" id="containerLG.html">
+	<div layout="row" layout-xs="column" layout-wrap>
+		<div ng-repeat="column in elemL.columns">
+			<div ng-repeat="elemL in column">
+				<div ng-include= "elemL.type + 'LG.html'"></div>
+			</div>
+		</div>
+	</div>
+</script>	
+
+<script type="text/ng-template" id="groupLG.html">
+	<md-card>
+		<div layout="row" layout-xs="column" layout-wrap>
+			<div ng-repeat="column in elemL.columns">
+				<div ng-repeat="elemL in column">
+					<div ng-if="elemL.type != group" ng-include= "elemL.type + 'LG.html'"></div>
+				</div>
+			</div>
+		</div>
+	</md-card>
+</script>	
+
+

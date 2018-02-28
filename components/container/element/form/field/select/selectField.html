@@ -1,0 +1,81 @@
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Select: {{myField.label}}</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveUpField()">	
+			<ng-md-icon icon="arrow_upwards" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveDownField()">	
+			<ng-md-icon icon="arrow_downward" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteField()">	
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showSelectField()">	
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Label</label>
+		<input ng-model="myField.label" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Key</label>
+		<input ng-model="myField.key" style="color:black;">
+	</md-input-container>
+	<md-switch ng-model="myField.required">
+		Required?
+	</md-switch>
+	<md-switch ng-model="myField.autocomplete">
+		Autocomplete?
+	</md-switch>
+	<md-switch ng-model="myField.multiple">
+		Multiple choices?
+	</md-switch>
+	<md-switch ng-model="myField.dynamic">
+		Dynamic?
+	</md-switch>
+	
+	<!-- Url if field is dynamic -->
+	<div ng-if="myField.dynamic">
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Source</label>
+			<input ng-model="myField.source_url" style="color:black;">
+		</md-input-container>
+		<div ng-show="new_variables.length > 0">
+			<font color="#F44336">New variables detect!</font><br>
+			Click on chips for add the variable
+			<md-chips ng-model="new_variables" readonly="true" md-transform-chip="" md-removable="false">
+				<md-chip-template>
+					<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+				</md-chip-template>
+			</md-chips>
+		</div>
+	</div>
+	
+	<!-- Element list if field is not dynamic -->
+	<div ng-if="!myField.dynamic">
+		<b>Select elements:</b><br>
+		<div ng-repeat="element in myField.elements">
+			<div layout-gt-sm="row">
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Name</label>
+					<input ng-model="element.name" style="color:black;">
+				</md-input-container>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Value</label>
+					<input ng-model="element.value" style="color:black;">
+				</md-input-container>
+				<md-button class="md-icon-button md-accent" aria-label="Delete" ng-click="deleteElement(myField.elements,$index)">
+					<ng-md-icon icon="delete" style="fill: #E91E63" size="20"></ng-md-icon> 
+				</md-button>
+			</div>
+		</div>
+		<div align="right">
+			<md-button class="md-raised md-primary" ng-click="addElement()">Add</md-button>
+		</div>
+	</div>
+	
+</md-content>

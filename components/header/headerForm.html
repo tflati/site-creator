@@ -1,0 +1,59 @@
+<md-toolbar class="md-accent">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Header</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showHeader()">
+			<ng-md-icon ng-show="head_visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="head_visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="head_visibility" class="md-whiteframe-4dp myform" flex layout-padding>	
+	<!--<md-subheader class="md-accent"><b>Define your header</b></md-subheader>-->
+	<form name="header_form">
+	
+		<div layout-gt-sm="row" layout-align="center center">
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Type</label>
+			<md-select name="type" ng-model="active_file.header.type">
+				<md-option value="normal">Normal</md-option>
+				<md-option value="widescreen">Widescreen</md-option>
+			</md-select>		
+		</md-input-container>
+		<md-button class="md-icon-button md-accent" ng-click="showDemoHeaderDialog($event)">
+			<ng-md-icon icon="help_outline" style="fill: #E91E63" size="20"></ng-md-icon> 
+		</md-button>
+	</div>
+		
+		<md-input-container class="md-block">
+			<label>Title</label>
+			<input required name="title" ng-model="active_file.header.title">
+			<div ng-messages="header_form.title.$error">
+				<div ng-message="required">This field is required.</div>
+			</div>
+		</md-input-container>
+		
+		<md-input-container class="md-block" ng-if="active_file.header.type == 'widescreen'" flex-gt-sm>
+			<label>Title color</label>
+			<md-select name="type" ng-model="active_file.header.title_color">
+				<md-option value="black">Black</md-option>
+				<md-option value="white">White</md-option>
+			</md-select>		
+		</md-input-container>
+		<br>
+		<md-input-container class="md-block">
+			<label>Description</label>
+			<textarea ng-model="active_file.header.description" md-maxlength="200" rows="2" md-select-on-focus></textarea>
+		</md-input-container>
+		
+		<md-input-container class="md-block">
+			<label>Long description</label><br>
+			<div text-angular ng-model="active_file.header.long_description" style="border:solid; border-color:#ccc;"></div>
+		</md-input-container>
+		
+		<my-upload my-element="active_file.header.image.src" my-label="{{'Image source (normal size)'}}"></my-upload>
+		<my-upload my-element="active_file.header.image.src_small" my-label="{{'Image source (small size)'}}"></my-upload>
+		
+		<my-logos-area></my-logos-area>	<!-- custom directive for logos area -->	
+	</form>
+</md-content>
+<br>

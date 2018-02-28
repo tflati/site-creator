@@ -1,0 +1,330 @@
+<html lang="en" >
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset="UTF-8">
+	<base href="/maggi/">
+	
+	<!-- Venn Diagram, NOT Angular lib-->
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript" src="lib/venn.js-0.2.16/venn.js"></script>
+	
+	<!--  Phylogenetic Tree, NOT Angular lib-->
+	<link rel="stylesheet" href="bower_components/phylotree/phylotree.css">
+  <!--  <script type="text/javascript" src="bower_components/phylotree/phylotree.js"></script>//veg.github.io/phylotree.js/phylotree.js-->
+    <script type="text/javascript" src="https://veg.github.io/phylotree.js/phylotree.js"></script>
+  
+	<!-- Angular Material style sheet -->
+	<!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.css" />
+  
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+  
+	<!-- Angular Material Library -->
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.js"></script>
+  
+	<!-- Angular Material Data Table -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"> </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+	<link rel="stylesheet" href="lib/mdDataTable-master/md-data-table-style.css" />
+	<script src="lib/mdDataTable-master/md-data-table.js" type="text/javascript"></script>
+	<script src="lib/mdDataTable-master/md-data-table-templates.js" type="text/javascript"></script>
+	
+	<!-- Icon -->
+	<script src="css/angular-material-icons.min.js"></script>  
+	
+	<!-- Icon Font awesome & Font awesome picker-->
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+	
+	<!-- Toasts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.js"></script>
+	
+	<!-- File Upload -->
+	<script src="lib/ng-file-upload/ng-file-upload-shim.js" type="text/javascript"></script>
+	<script src="lib/ng-file-upload/ng-file-upload.js" type="text/javascript"></script>
+	
+	<!-- Chart -->
+	<script src="bower_components/chart.js/dist/Chart.js"></script>
+	<script src="bower_components/angular-chart.js/angular-chart.js"></script>
+
+	<!-- TextAngular -->
+	<link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css'>
+	<script src='bower_components/textAngular/dist/textAngular-rangy.min.js'></script>
+	<script src='bower_components/textAngular/dist/textAngular-sanitize.min.js'></script>
+	<script src='bower_components/textAngular/dist/textAngular.min.js'></script>
+	
+	<!-- Word Clouds -->
+	<link rel="stylesheet" href="bower_components/jqcloud2/dist/jqcloud.min.css">
+	<script src="bower_components/jqcloud2/dist/jqcloud.min.js"></script>
+	<script src="bower_components/angular-jqcloud/angular-jqcloud.js"></script>
+	
+	<!-- Tooltip -->
+	<link rel="stylesheet" href="bower_components/angular-tooltips/dist/angular-tooltips.css" />
+	<script src="bower_components/angular-tooltips/dist/angular-tooltips.js"></script>
+	
+	
+
+	<!-- Inizialite application -->
+	<script>
+		var app = angular.module('MyApp', ['ngMaterial','ngAnimate','ngMdIcons','mdDataTable','ngMessages', 'toaster', 'ngMaterialSidemenu', 'dndLists', 'ngFileUpload', 'chart.js', 'textAngular', 'angular-jqcloud', 'tooltips']);
+
+		app.config(function ($mdThemingProvider,$mdAriaProvider) {		
+			$mdThemingProvider.theme('demo')
+				.primaryPalette('blue-grey')
+				.accentPalette('amber')
+				.warnPalette('deep-orange');
+			
+			$mdThemingProvider.alwaysWatchTheme(true);
+			$mdAriaProvider.disableWarnings();
+		});
+	</script>
+	
+	<!-- Service -->
+	<script src="components/service/variableList.js" type="text/javascript"></script>
+	<script src="components/service/messageService.js" type="text/javascript"></script>
+	<script src="components/service/layoutService.js" type="text/javascript"></script>
+	
+	<!-- Main Controller -->
+	<script src="components/main_model.js" type="text/javascript"></script> 
+	
+	<!-- Directive -->
+	<script src="components/option/myFileOption.js" type="text/javascript"></script> 
+	<script src="components/header/myHeader.js" type="text/javascript"></script> 
+	<script src="components/header/myLogosArea.js" type="text/javascript"></script> 
+	<script src="components/header/myLogo.js" type="text/javascript"></script> 
+	<script src="components/menu/myMenu.js" type="text/javascript"></script> 
+	<script src="components/upload/myUpload.js" type="text/javascript"></script> 
+	<script src="components/container/myContainers.js" type="text/javascript"></script> 
+	<script src="components/container/mySingleContainer.js" type="text/javascript"></script> 
+	<script src="components/container/element/chart/myChart.js" type="text/javascript"></script> 
+	<script src="components/container/element/datatable/myDataTable.js" type="text/javascript"></script> 
+	<script src="components/container/element/form/myForm.js" type="text/javascript"></script> 
+	<script src="components/container/element/form/field/text/myTextField.js" type="text/javascript"></script>
+	<script src="components/container/element/form/field/number/myNumberField.js" type="text/javascript"></script>
+	<script src="components/container/element/form/field/email/myEmailField.js" type="text/javascript"></script>
+	<script src="components/container/element/form/field/password/myPasswordField.js" type="text/javascript"></script>
+	<script src="components/container/element/form/field/checkbox/myCheckboxField.js" type="text/javascript"></script>
+	<script src="components/container/element/form/field/date/myDateField.js" type="text/javascript"></script>
+	<script src="components/container/element/form/field/select/mySelectField.js" type="text/javascript"></script>
+	<script src="components/container/element/form/field/radio_button/myRadioButtonField.js" type="text/javascript"></script>
+	<script src="components/container/element/iframe/myIFrame.js" type="text/javascript"></script> 
+	<script src="components/container/element/image/myImage.js" type="text/javascript"></script> 
+	<script src="components/container/element/ptree/myPTree.js" type="text/javascript"></script> 
+	<script src="components/container/element/text/myText.js" type="text/javascript"></script> 
+	<script src="components/container/element/list/myList.js" type="text/javascript"></script> 
+	<script src="components/container/element/list/item/myItemList.js" type="text/javascript"></script> 
+	<script src="components/container/element/button_group/myButtonGroupItem.js" type="text/javascript"></script> 
+	<script src="components/container/element/button_group/button/myButton.js" type="text/javascript"></script> 
+	<script src="components/container/element/word_cloud/myWordCloud.js" type="text/javascript"></script> 
+	<script src="components/container/element/venn/myVenn.js" type="text/javascript"></script> 
+	<script src="components/container/element/slider/mySlider.js" type="text/javascript"></script> 
+	<script src="components/layout/myLayout.js" type="text/javascript"></script> 
+	<script src="components/faicon_picker/myfaiconPicker.js" type="text/javascript"></script> 
+	<script src="components/footer/myFooter.js" type="text/javascript"></script> 
+	<script src="components/variables/myVariables.js" type="text/javascript"></script> 
+	
+	<!-- File List -->
+	<script src="components/file_list/myFileList.js" type="text/javascript"></script> 
+	
+	<!-- File Preview Area -->
+	<script src="components/preview_area/myFilePreviewArea.js" type="text/javascript"></script> 
+	
+	<!-- Engine for demo -->
+	<script src="engine/myDemo.js" type="text/javascript"></script> 
+	
+	<!-- sidemenu -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.css">
+	<script src="bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.js"></script>
+	
+	<!-- layout form -->
+	<script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="bower_components/angular-drag-and-drop-lists/bootstrap.min.css" />-->
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-drag-and-drop-lists/demo-framework.css" />
+	<link rel="stylesheet" type="text/css" href="bower_components/angular-drag-and-drop-lists/drag_drop_list.css" />
+
+	<!-- Engine directive -->
+	<link rel="stylesheet" type="text/css" href="engine/engine_css/engine_css.css" />
+	<script src="engine/engine_components/menu_bar/myMenuBar.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/sidenav_menu/mySidenavMenu.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/header/myEngineHeader.js" type="text/javascript"></script>
+	<script src="engine/engine_components/button_group/myButtonGroupElement.js" type="text/javascript"></script>
+	<script src="engine/engine_components/iframe/myIFrameElement.js" type="text/javascript"></script>
+	<script src="engine/engine_components/image/myImageElement.js" type="text/javascript"></script>
+	<script src="engine/engine_components/text/myTextElement.js" type="text/javascript"></script>
+	<script src="engine/engine_components/list/myListElement.js" type="text/javascript"></script>
+	<script src="engine/engine_components/footer/myEngineFooter.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/ptree/myPTreeElement.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/table/myTableElement.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/my_custom_element/myCustomElement.js" type="text/javascript"></script>
+	<script src="engine/engine_components/my_custom_element/element/buttonElement.js" type="text/javascript"></script>
+	<script src="engine/engine_components/chart/myChartElement.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/form/myFormElement.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/form/field/myAutocomplete.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/wordcloud/myWordCloudElement.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/venn/myVennElement.js" type="text/javascript"></script> 
+	<script src="engine/engine_components/slider/mySliderElement.js" type="text/javascript"></script> 
+	
+	<!-- Graphics -->
+	<link rel="stylesheet" href="css/app.css">
+	<!--<link rel="stylesheet" href="css/engine.css">-->
+	<!--<link rel="stylesheet" href="css/layout_form.css">-->
+	
+	<title>TESI</title>
+</head>
+
+<body id="mainContainer" ng-app="MyApp" ng-controller="MainCtrl" layout="column">
+	
+	<md-toolbar layout="row">
+		<div class="md-toolbar-tools">
+			<md-button class="menu" ng-click="toggleLeft()">
+				<ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
+			</md-button>
+			<h2 flex md-truncate>
+				<span>Tesi Francesco Maggi</span>
+			</h2>
+			<!-- show only on work page -->
+			<md-button ng-show="toShow == 'work'" class="md-icon-button" aria-label="Favorite" ng-click="changeFullScreen()">	
+				<ng-md-icon ng-show="!fullScreen" icon="fullscreen" style="fill: white"></ng-md-icon> 
+				<ng-md-icon ng-show="fullScreen" icon="fullscreen_exit" style="fill: white"></ng-md-icon> 
+			</md-button>
+			<md-button ng-show="toShow == 'work'" class="md-icon-button" aria-label="Favorite" ng-click="setRightSidebar('variable');toggleRight();">	
+				<ng-md-icon icon="all_inclusive" style="fill: white"></ng-md-icon> 
+			</md-button>
+			<md-button ng-show="toShow == 'work'" class="md-icon-button" aria-label="Favorite" ng-click="setRightSidebar('file_menu');toggleRight();">	
+				<ng-md-icon icon="more_vert" style="fill: white"></ng-md-icon> 
+			</md-button>
+			
+		</div>
+	</md-toolbar>
+	
+	<div class="container" layout="row" flex>
+		<!--Menù (left sidenav)-->
+		<md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+			<md-toolbar layout="row">
+				<div class="md-toolbar-tools">
+					<md-button class="menu" ng-click="toggleLeft()">
+						<ng-md-icon icon="menu" style="fill: white"></ng-md-icon>
+					</md-button>
+					<h2>Menu</h2>
+				</div>
+			</md-toolbar>
+			
+			<md-list flex>
+				<md-list-item class="md-1-line" ng-click="show('home'); fillFileList(); toggleLeft()">
+					<div class="inset">
+						<ng-md-icon icon="folder_shared"></ng-md-icon>
+					</div>
+					<div class="inset">
+						Project List
+					</div>
+				</md-list-item>
+				<md-list-item class="md-1-line" ng-click="show('work'); openFile(); toggleLeft(); showOption()">
+					<div class="inset">
+						<ng-md-icon icon="add_circle"></ng-md-icon>
+					</div>
+					<div class="inset">
+						New Project
+					</div>
+				</md-list-item>
+			</md-list>
+		</md-sidenav>
+		
+		<!-- Variable area (right sidenav)-->
+		<md-sidenav class="md-sidenav-right" md-component-id="right" md-whiteframe="4">
+			<div ng-show = "rightSidebar == 'variable'">
+				<md-toolbar layout="row">
+					<div class="md-toolbar-tools">
+						<md-button class="md-icon-button" aria-label="Favorite" ng-click="toggleRight()">	
+							<ng-md-icon icon="all_inclusive" style="fill: white"></ng-md-icon> 
+						</md-button>
+						<h2>Variables</h2>
+					</div>
+				</md-toolbar>
+				<md-content flex layout-padding >
+					<my-variables></my-variables>	
+				</md-content>
+			</div>
+			<div ng-show = "rightSidebar == 'file_menu'">
+				<md-toolbar layout="row">
+					<div class="md-toolbar-tools">
+						<md-button class="md-icon-button" aria-label="Favorite" ng-click="toggleRight()">	
+							<ng-md-icon icon="more_vert" style="fill: white"></ng-md-icon> 
+						</md-button>
+						<h2>File</h2>
+					</div>
+				</md-toolbar>
+				<md-list flex>
+					<md-list-item class="md-1-line" ng-click="saveFile(true)">
+						<div class="inset">
+							<ng-md-icon icon="save"></ng-md-icon>
+						</div>
+						<div class="inset">
+							Save project
+						</div>
+					</md-list-item>
+					<md-list-item class="md-1-line" ng-click="downloadFile(active_file_id);toggleRight();">
+						<div class="inset">
+							<ng-md-icon icon="file_download"></ng-md-icon>
+						</div>
+						<div class="inset">
+							Download
+						</div>
+					</md-list-item>
+					<md-list-item class="md-1-line" ng-click="launchDemo(active_file_id);toggleRight();">
+						<div class="inset">
+							<ng-md-icon icon="play_circle_outline"></ng-md-icon>
+						</div>
+						<div class="inset">
+							Preview
+						</div>
+					</md-list-item>
+				</md-list>
+			</div>
+		</md-sidenav>
+		
+		<!-- home page -->
+		<div ng-show="toShow == 'home'" layout-padding flex>
+			<my-file-list></my-file-list>
+		</div>
+		
+		<!-- work page-->
+		<div ng-show="toShow == 'work'" layout="row" layout-padding flex>
+			<!-- work side -->
+			<md-content id="form_content" class="md-whiteframe-4dp" flex>
+				<!-- form list -->
+				<my-file-option></my-file-option>    <!-- custom directive for option form -->	
+				<my-header></my-header>			     <!-- custom directive for header form -->	
+				<my-menu></my-menu>					 <!-- custom directive for menu form -->	
+				<my-containers></my-containers>		 <!-- custom directive for container form -->	
+				<my-layout></my-layout>		 		 <!-- custom directive for layout form -->	
+				<my-footer></my-footer>				 <!-- custom directive for footer form -->	
+			</md-content>
+			
+			<!-- json preview side -->
+			<md-content  ng-show="!fullScreen" id="result_content" class="md-whiteframe-4dp" flex>
+				<my-file-preview-area></my-file-preview-area>
+			</md-content>
+		</div>
+		
+		<!-- preview page -->
+		<div ng-if="toShow == 'demo'" layout-padding flex>
+			<my-demo file-name="file_options.filename"></my-demo>
+		</div>
+		
+		<!--TOAST AREA -->
+		<toaster-container toaster-options="{'position-class': 'toast-bottom-right'}"></toaster-container>
+	</div>
+</body>
+</html>

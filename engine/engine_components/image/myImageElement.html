@@ -1,0 +1,15 @@
+<md-card ng-if="myElement.image_position == 'before_text' || myElement.image_position == ''">
+	<img ng-src="{{uploadResource(myElement.source)}}" class="md-card-image">
+</md-card>
+<md-card-title ng-if="myElement.label">
+	<md-card-title-text>
+		<span class="md-headline">{{myElement.label}}</span>
+	</md-card-title-text>
+</md-card-title>
+<md-card-content ng-if="myElement.description">
+	<span align="justify" class="md-padding" ng-bind-html="myElement.description"></span>
+</md-card-content>
+<md-card ng-if="myElement.image_position == 'after_text'">
+	<img ng-src="{{image_path}}" class="md-card-image">
+</md-card>
+

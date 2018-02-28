@@ -1,0 +1,105 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "id",
+				"tooltip": "id",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": false
+			},
+			{
+				"label": "Class",
+				"tooltip": "Class",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "2016",
+				"tooltip": "2016",
+				"filters": {
+					"title": "Chose a name:",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "2017",
+				"tooltip": "2017",
+				"filters": {
+					"title": "Chose a name:",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "2",
+	"hits": [
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			],
+		    "Class": [
+				{
+					"type": "text",
+					"label": "Computer science",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"2016": [
+				{
+					"type": "number",
+					"value": "250"
+				}
+			],
+			"2017": [
+				{
+					"type": "number",
+					"value": "300"
+				}
+			]
+		},
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			],
+		    "Class": [
+				{
+					"type": "text",
+					"label": "Law",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"2016": [
+				{
+					"type": "number",
+					"value": "480"
+				}
+			],
+			"2017": [
+				{
+					"type": "number",
+					"value": "650"
+				}
+			]
+		}		
+	]
+}

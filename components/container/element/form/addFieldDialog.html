@@ -1,0 +1,127 @@
+<md-dialog>
+	<form ng-cloak>
+		<md-toolbar>
+		  <div class="md-toolbar-tools">
+			<h2>Add Field</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<ng-md-icon icon="close" style="fill: white"></ng-md-icon> 
+			</md-button>
+		  </div>
+		</md-toolbar>
+
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<p align="center"><b>&nbsp;&nbsp;&nbsp;&nbsp; Add one or more field to form &nbsp;&nbsp;&nbsp;&nbsp;</b></p>
+
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.text">
+							Text
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of text</label>
+						<input type="number" ng-model="choices.textN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>		
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.number">
+							Number
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of number</label>
+						<input type="number" ng-model="choices.numberN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.email">
+							Email
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of email</label>
+						<input type="number" ng-model="choices.emailN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.password">
+							Password
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of password</label>
+						<input type="number" ng-model="choices.passwordN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.date">
+							Date
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of input date</label>
+						<input type="number" ng-model="choices.dateN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.checkbox">
+							Checkbox
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of checkbox</label>
+						<input type="number" ng-model="choices.checkboxN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.select">
+							Select
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of select</label>
+						<input type="number" ng-model="choices.selectN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center">
+					<div flex="50" >
+						<md-checkbox ng-model="choices.radio">
+							Radio Button
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of radio b.</label>
+						<input type="number" ng-model="choices.radioN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<md-button class="md-raised md-primary" ng-click="answer(choices)">Add</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

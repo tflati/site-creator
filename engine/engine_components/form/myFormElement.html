@@ -1,0 +1,98 @@
+<!--<md-card>-->
+	<md-card-title>
+		<md-card-title-text>
+			<span class="md-headline">{{myElement.label}}</span>
+		</md-card-title-text>
+	</md-card-title>
+	<md-card-content>
+		<span align="justify" class="md-padding" ng-bind-html="myElement.description"></span>
+		<br><br>
+		<form name="{{myElement.label}}" ng-submit="sendData(myElement.submit.url)">
+			<div ng-repeat="field in myElement.fields"> <!-- dopo si ciclerà sul layout -->
+				<div ng-include="field.type + 'F.html'"></div>
+			</div>
+			<br>
+			<div align="right">
+				<md-button type="submit" class="md-raised md-accent">{{myElement.submit.label}}</md-button>
+			</div>
+		</form>
+	</md-card-content>	
+<!--</md-card>-->
+
+<!-- layout field -->
+<script type="text/ng-template" id="textF.html">
+	<md-input-container class="md-block" flex-gt-xs>
+        <label>{{field.label}}</label>
+		<input ng-model="f_fields[field.key]" ng-required="field.required"  />
+		<div class="hint" ng-show="field.hint">{{field.hint}}</div>
+	</md-input-container>	
+</script>
+
+<script type="text/ng-template" id="emailF.html">
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>{{field.label}}</label>
+        <input ng-model="f_fields[field.key]" ng-required="field.required"  required minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+		<div class="hint" ng-show="field.hint">{{field.hint}}</div>
+	</md-input-container>	
+</script>
+
+<script type="text/ng-template" id="passwordF.html">
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>{{field.label}}</label>
+        <input type="password" ng-model="f_fields[field.key]" ng-required="field.required"  />
+		<div class="hint" ng-show="field.hint">{{field.hint}}</div>
+	</md-input-container>	
+</script>
+
+
+<script type="text/ng-template" id="dateF.html">
+	<md-input-container class="md-block" flex-gt-sm>
+        <label>{{field.label}}</label>
+        <md-datepicker ng-model="f_fields[field.key]" ng-required="field.required" ></md-datepicker>
+		<div class="hint" ng-show="field.hint">{{field.hint}}</div>
+	</md-input-container>	
+</script>
+
+<script type="text/ng-template" id="checkboxF.html">
+	<md-checkbox ng-model="f_fields[field.key]" ng-required="field.required" >{{field.label}}</md-checkbox>
+</script>
+
+<script type="text/ng-template" id="radioF.html"> <!--DA CONTROLLARE REQUIRED -->
+	<md-radio-group ng-model="f_fields[field.key]" class="md-primary" ng-required="field.required">
+		<p>{{field.label}}</p>
+        <md-radio-button ng-repeat="rb in field.elements" ng-value="rb.value" ng-class="{'md-align-top-left': $index==1}" >
+            {{ rb.name }}<br>
+        </md-radio-button>
+    </md-radio-group>
+	<br>
+</script>
+
+<script type="text/ng-template" id="selectF.html">
+	
+	<!-- Normal select field -->
+	<md-input-container ng-if="!field.autocomplete">
+		<label>{{field.label}}</label>
+		<md-select ng-model="f_fields[field.key]" ng-required="field.required" style="color:black;" ng-if="field.multiple" multiple >
+			<md-option><em>None</em></md-option>
+			<md-option ng-repeat="e in field.elements" ng-value="e.value">{{e.name}}
+			</md-option>
+		</md-select>
+		<md-select ng-model="f_fields[field.key]" ng-required="field.required" style="color:black;" ng-if="!field.multiple" >
+			<md-option><em>None</em></md-option>
+			<md-option ng-repeat="e in field.elements" ng-value="e.value">{{e.name}}
+			</md-option>
+		</md-select>
+	</md-input-container>
+	
+	<!-- Select with autocomplete -->
+	<ng-if="field.autocomplete">
+		<my-autocomplete my-element="field" my-value="f_fields[field.key]"></my-autocomplete>
+	</ng-if>
+	
+</script>
+
+
+<!-- layout container 
+<script type="text/ng-template" id="containerL.html">
+	<br><br>container
+</script>-->

@@ -1,0 +1,23 @@
+<div layout-gt-sm="row">
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>{{myLabel}}</label>
+		<input ng-model="myElement" style="color:black;">
+		<div ng-show="new_variables.length > 0">
+			&nbsp;<br>
+			<font color="#F44336">New variables detect!</font><br>
+			Click on chips for add the variable
+			<md-chips ng-model="new_variables" readonly="true" md-transform-chip="" md-removable="false">
+				<md-chip-template>
+					<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+				</md-chip-template>
+			</md-chips>
+		</div>
+	</md-input-container>
+	<md-button class="md-icon-button md-accent" aria-label="Upload" ngf-select="uploadImage($file, $invalidFiles)" accept="image/*" ngf-max-size="20MB">
+		<ng-md-icon icon="file_upload" style="fill: #E91E63" size="20"></ng-md-icon> 
+	</md-button>
+</div>
+<md-progress-linear md-mode="determinate" value="{{f.progress}}" ng-show="f.progress >= 0 && f.progress <= 99"></md-progress-linear>
+<div style="font:smaller">{{errFile.name}} <font color="red">{{errFile.$error}} {{errFile.$errorParam}}</font></div>     
+{{errorMsg}}
+<br><br>

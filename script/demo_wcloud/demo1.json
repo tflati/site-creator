@@ -1,0 +1,22 @@
+{
+	"words": [
+		{"text": "Lorem", "weight": "13" , "link": "http://www.google.it", "html":{"title":"PROVA DI TOOLTIP"}},
+		{"text": "Ipsum", "weight": "10.5", "link": "http://github.com/mistic100/jQCloud"},
+		{"text": "Dolor", "weight": "9.4"},
+		{"text": "Sit", "weight": "8"},
+		{"text": "Amet", "weight": "6.2"},
+		{"text": "Consectetur", "weight": "5"},
+		{"text": "Adipiscing", "weight": "5"},
+		{"text": "Sit2", "weight": "8", "html":{"title":"PROVA DI colore", "style":" color: #f442e8 !important;"}},
+		{"text": "Amet2", "weight": "6.2"},
+		{"text": "Consectetur2", "weight": "12"},
+		{"text": "Adipiscing2", "weight": "5"},
+		{"text": "Amet3", "weight": "6.2"},
+		{"text": "Consectetur3", "weight": "5"},
+		{"text": "Adipiscing3", "weight": "5"},
+		{"text": "Sit3", "weight": "8", "html":{"title":"PROVA"}},
+		{"text": "Amet3", "weight": "6.2"},
+		{"text": "Consectetur3", "weight": "12"},
+		{"text": "Adipiscing3", "weight": "5"}
+	]
+}

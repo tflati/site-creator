@@ -1,0 +1,81 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "class",
+				"header": "Class",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "number",
+				"header": "Number",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			}
+		]
+	},
+	"total": "2",
+	"hits": [
+		{
+		    "class": [
+				{
+					"type": "text",
+					"label": "Total snps",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4630814"
+				}
+			]
+		},
+		{
+		    "class": [
+				{
+					"type": "text",
+					"label": "Total indels",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "461785"
+				}
+			]
+		},
+		{
+		    "class": [
+				{
+					"type": "text",
+					"label": "Number of accessions",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "146"
+				}
+			]
+		}
+	]
+}

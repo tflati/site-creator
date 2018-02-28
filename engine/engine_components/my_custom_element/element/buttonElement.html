@@ -1,0 +1,65 @@
+<md-button title="{{myButton.title}}" ng-style="{'background-color': myButton.color}"  ng-click="doAction()" ng-disabled="{{myButton.disabled}}" class="md-raised md-primary">
+	<div ng-repeat="elem in myButton.items" ng-include="elem.type + 'T.html'"  style="display: inline-block"></div>
+</md-button>
+
+<!-- TEXT -->
+<script type="text/ng-template" id="textT.html">
+	<div title="{{elem.title}}" ng-if="elem.url" style="display: inline-block">
+		<a target="{{elem.target}}" ng-href="{{elem.url}}" style="text-decoration: underline">
+			<font color="{{elem.color}}">{{elem.label}}</font>
+		</a>
+		
+	</div>
+	<div title="{{elem.title}}" ng-if="!elem.url" style="display: inline-block">
+		<font color="{{elem.color}}">{{elem.label}}</font>
+	</div>
+	<!-- pedix -->
+	<sub ng-if="elem.pedix">
+		<div ng-repeat="elem in elem.pedix" ng-include="elem.type + 'T.html'"  style="display: inline-block"></div>
+	</sub>
+</script>
+
+<!-- NUMBER -->
+<script type="text/ng-template" id="numberT.html">
+	<div  style="display: inline-block">
+		{{elem.value}}
+	</div>
+</script>
+
+<!-- ICON -->
+<script type="text/ng-template" id="iconT.html">
+	<div  ng-if="elem.url" style="display: inline-block">
+		<a target="{{elem.target}}" ng-href="{{elem.url}}">
+			<i class="fa {{elem.icon}} {{elem.icon_dim}}" aria-label="{{elem.title}}" title="{{elem.title}}" style="color: {{elem.icon_color}}"></i>
+		</a>
+	</div>
+	<div  ng-if="!elem.url" style="display: inline-block">
+		<i class="fa {{elem.icon}} {{elem.icon_dim}}" aria-label="{{elem.title}}" title="{{elem.title}}" style="color: {{elem.icon_color}}"></i>
+	</div>
+	<!-- pedix -->
+	<sub ng-if="elem.pedix">
+		<div ng-repeat="elem in elem.pedix" ng-include="elem.type + 'T.html'"  style="display: inline-block"></div>
+	</sub>	
+</script>
+
+<!-- IMAGE -->
+<script type="text/ng-template" id="imageT.html">
+	<div  ng-if="elem.url" style="display: inline-block">
+		<a target="{{elem.target}}" ng-href="{{elem.url}}">
+			<img title="{{elem.title}}" ng-src="{{elem.img_src}}" height="{{elem.height}}" width="{{elem.width}}">	
+		</a>
+	</div>
+	<div  ng-if="!elem.url" style="display: inline-block">
+		<img title="{{elem.title}}" ng-src="{{elem.img_src}}" height="{{elem.height}}" width="{{elem.width}}">	
+	</div>
+	<!-- pedix -->
+	<sub ng-if="elem.pedix">
+		<div ng-repeat="elem in elem.pedix" ng-include="elem.type + 'T.html'"  style="display: inline-block"></div>
+	</sub>
+</script>
+
+<!-- BUTTON -->
+<script type="text/ng-template" id="buttonT.html">
+	<button-element my-button="elem"></button-element>
+</script>
+

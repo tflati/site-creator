@@ -1,0 +1,83 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "flower_shape",
+				"header": "Flower shape",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "flower_shape": [
+				{
+					"type": "text",
+					"label": "Showy",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "89"
+				}
+			]
+		},
+		{
+		    "flower_shape": [
+				{
+					"type": "text",
+					"label": "Non-showy",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "26"
+				}
+			]
+		},
+		{
+		    "flower_shape": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "8"
+				}
+			]
+		}
+	]
+}

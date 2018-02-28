@@ -1,0 +1,263 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "origin",
+				"header": "Origin",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Gansu, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Tibet, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Wild, Sichuan China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Beijing, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Sichuan, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Shanxi, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Xinjiang, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Wild, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Liaoning, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Wild, USA",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "origin": [
+				{
+					"type": "text",
+					"label": "Gansu, China",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		}
+	]
+}

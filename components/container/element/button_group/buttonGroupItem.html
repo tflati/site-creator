@@ -1,0 +1,68 @@
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Button group: {{myElement.label}}</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteBG()">
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showBG()">
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>
+	
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Label</label>
+		<input ng-model="myElement.label"  style="color:black;">
+	</md-input-container>
+	
+	<md-input-container class="md-block">
+		<label>Description</label><br>
+		<div text-angular ng-model="myElement.description" style="border:solid; border-color:#ccc;"></div>
+	</md-input-container>
+	
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Layout</label>
+		<md-select name="type" ng-model="myElement.layout_g">
+			<md-option value="column">Column</md-option>
+			<md-option value="row">Row</md-option>
+		</md-select>
+	</md-input>
+	<br>
+	
+	<md-switch ng-model="myElement.dynamic">
+		Dynamic?
+	</md-switch>
+	
+	<div ng-if="myElement.dynamic">	
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Source</label>
+			<input ng-model="myElement.source"  style="color:black;">
+			<div ng-show="new_variables.length > 0">
+				&nbsp;<br>
+				<font color="#F44336">New variables detect!</font><br>
+				Click on chips for add the variable
+				<md-chips ng-model="new_variables" readonly="true" md-transform-chip="" md-removable="false">
+					<md-chip-template>
+						<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+					</md-chip-template>
+				</md-chips>
+			</div>
+		</md-input-container>
+	</div>
+	
+	<br><br>
+	<div ng-if="!myElement.dynamic">
+		<b>Buttons:</b><br>
+		<div ng-repeat="button in myElement.buttons">
+			<my-button my-item="button" action="showDeleteButtonDialog('Are you sure to delete the buttom ?',myElement.buttons,$index)" action2="moveFieldDialog('up',myElement.buttons,$index)" action3="moveFieldDialog('down',myElement.buttons,$index)"></my-button>
+		</div>
+		<br>
+		<div align="right">
+			<md-button class="md-raised md-primary" ng-click="addButton()">Add Button</md-button>
+		</div>
+	</div>
+
+</md-content>
+<br>

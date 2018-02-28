@@ -1,0 +1,113 @@
+.span_title {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	font-size: 38px;
+	font-weight: bold;
+}
+
+.span_subtitle {
+	position: absolute;
+	top: 22%;
+	left: 5%;
+	font-size: 30px;
+}
+
+.img_small {
+	clip-path:  inset(0 0 50% 0);
+}
+
+.hint {
+	/* Position the hint */
+	position: absolute;
+	left: 2px;
+	right: auto;
+	bottom: 7px;
+	/* Copy styles from ng-messages */
+	font-size: 12px;
+	line-height: 14px;
+	transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+	/* Set our own color */
+	color: grey; 
+}
+
+.angular-tooltip {
+	text-align: center;
+	min-width: 200px;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto; 
+	background-color: #616161; 
+	border-radius: 10px; 
+	padding-top: 30px; 
+	padding-bottom: 30px; 
+	padding-left: 30px; 
+	padding-right: 30px; 
+	color: white;
+	font-weight: bold;
+	border: 2px solid #F1F1F1;
+}
+
+#d3_layout_phylotree_context_menu {
+        list-style-type: none;
+        padding: 10px 30px;
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,0.15);
+        border-radius: 4px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    }
+    
+#d3_layout_phylotree_context_menu .divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: #e5e5e5;
+}
+
+#d3_layout_phylotree_context_menu li {
+	list-style-type: none;
+}
+
+#d3_layout_phylotree_context_menu a:hover {
+	cursor: pointer;
+}
+
+#d3_layout_phylotree_context_menu li.dropdown-header {
+	font-size: 0.8em;
+	color: #999;
+	margin: 5px 0px 5px 0px;
+}
+
+md-card md-card-title md-card-title-media .md-media-md {
+    height: 125px;
+    width: 200px;
+}
+md-card md-card-title md-card-title-media .md-media-lg {
+    height: 250px;
+    width: 400px;
+}
+
+md-card md-card-title-media img {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.header-logo {
+	max-height: 65px;
+	width: auto;
+}
+
+#footer {
+	background-color: #607D8B;
+	color: #ffffff;
+	font-weight: bolder;
+	padding: 1em;
+	margin-top: 2em;
+}

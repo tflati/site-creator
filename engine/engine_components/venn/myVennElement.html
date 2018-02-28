@@ -1,0 +1,135 @@
+<!--<md-content layout-xs="column" layout="row" flex style="width:100% !important;">
+	<md-card>-->
+		<md-card-title>
+			<md-card-title-text>
+				<span class="md-headline">{{myElement.label}}</span>
+			</md-card-title-text>
+        </md-card-title>
+		<md-card-content style="width:100%;">
+			<span align="justify" class="md-padding" ng-bind-html="myElement.description"></span>
+			
+			<!--FILTER-->
+			<div ng-repeat="filter_obj in filter_list">
+				<b>{{filter_obj.title}}</b>
+				<div layout-gt-sm="row">
+					<div ng-repeat="filter in filter_obj.filters">
+						<div ng-switch="filter.type">
+						
+							<div ng-switch-when="text"> 
+								<md-input-container class="md-block" flex-gt-sm>
+									<label>{{formatFilterLabel(filter_obj.label)}}</label>
+									<input ng-model="filter.chosen_value" ng-blur='applyFilter();'>
+								</md-input-container>
+							</div>
+							
+							<div ng-switch-when="number"> 
+								<div layout-gt-sm="row">	
+									<md-input-container  class="md-block" flex-gt-sm>
+										<label>Operator</label>
+										<md-select name="type" ng-model="filter.operators" >
+											<md-option value="<"> &lt; </md-option>
+											<md-option value=">"> &gt;</md-option>
+											<md-option value="<="> &#8804; </md-option>
+											<md-option value=">="> &#8805; </md-option>
+											<md-option value="="> = </md-option>
+											<md-option value="!="> &ne; </md-option>
+										</md-select>
+									</md-input-container>
+									<md-input-container  class="md-block" flex-gt-sm>
+										<label>{{formatFilterLabel(filter_obj.label)}}</label>
+										<input type="number" step="{{filter.step}}" ng-model="filter.chosen_value" min="{{filter.min}}" max="{{filter.max}}" ng-blur='applyFilter();' />
+									</md-input-container>	
+								</div>
+							</div>
+							
+							<div ng-switch-when="number_range"> 
+								<div layout-gt-sm="row" layout-align="center bottom">	
+									<md-input-container  class="md-block" flex-gt-sm>
+										<!--<label>{{formatFilterLabel(filter_obj.label)}}</label>-->
+										<input type="number" step="{{filter.step1}}" ng-model="filter.chosen_value1" min="{{filter.min1}}" max="{{filter.max1}}" ng-blur='filter.chosen_value2 ? applyFilter() : false' />
+									</md-input-container>	
+									<md-input-container  class="md-block" flex-gt-sm>
+										<!--<label>Operator</label>-->
+										<md-select name="type" ng-model="filter.operators1" ng-change='filter.chosen_value1 && filter.chosen_value2 ? applyFilter() : false'>
+											<md-option value="<"> &lt; </md-option>
+											<md-option value="<="> &#8804; </md-option>
+										</md-select>
+									</md-input-container>
+									<p style="padding-left: 10px; padding-right: 10px;">{{filter.text}}</p>
+									<md-input-container  class="md-block" flex-gt-sm>
+										<!--<label>Operator</label>-->
+										<md-select name="type" ng-model="filter.operators2" ng-change='filter.chosen_value1 && filter.chosen_value2 ? applyFilter() : false'>
+											<md-option value="<"> &lt; </md-option>
+											<md-option value="<="> &#8804; </md-option>
+										</md-select>
+									</md-input-container>
+									<md-input-container  class="md-block" flex-gt-sm>
+										<!--<label>{{formatFilterLabel(filter_obj.label)}}</label>-->
+										<input type="number" step="{{filter.step2}}" ng-model="filter.chosen_value2" min="{{filter.min2}}" max="{{filter.max2}}" ng-blur='filter.chosen_value1 ? applyFilter() : false'/>
+									</md-input-container>	
+								</div>
+							</div>
+							
+							<div ng-switch-when="radio"> 
+								<br>
+								<md-radio-group ng-model="filter.chosen_value">
+									<md-radio-button ng-repeat="radio in filter.values" ng-value="radio" ng-change='applyFilter();'>{{radio}}</md-radio-button>
+								</md-radio-group>
+							</div>
+							
+							<div ng-switch-when="select"> 
+								<md-input-container>
+									<label>{{formatFilterLabel(filter_obj.label)}}</label>
+
+									<div ng-if="filter.multiple == false">
+										<md-select ng-model="filter.chosen_value" ng-change="applyFilter();">
+											<md-option ng-repeat="element in filter.values" ng-value="element">{{element}}</md-option>
+										</md-select>
+									</div>
+									<div ng-if="filter.multiple == true">
+										<md-select ng-model="filter.chosen_value" ng-blur="applyFilter();" multiple>
+											<md-option ng-repeat="element in filter.values" ng-value="element" >{{element}}</md-option>
+										</md-select>
+									</div>
+								</md-input-container>
+							</div>
+							
+							<div ng-switch-when="checkbox"> 		
+								<md-checkbox ng-model="filter.chosen_value" ng-click="applyFilter();">
+									{{filter.message}}
+								</md-checkbox>									
+							</div>
+							
+							<div ng-switch-when="fieldset">
+								<fieldset style=" border: 0 !important;">
+									<div layout="row" layout-wrap flex>
+										<div ng-repeat="item in filter.values">
+											<md-checkbox ng-checked="exists(item, filter.chosen_value)" ng-click="toggle(item, filter.chosen_value);applyFilter();" style="">
+												<span style = "padding-right:0.5cm">{{ item }}</span>
+											</md-checkbox>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--VENN DIAGRAM-->
+			<div id="venn"></div>
+				<span>					
+					<i class="fa fa-info-circle fa-2x" aria-label="" title="" style="color: orange"><md-tooltip md-direction="top">Move the cursor over the set to read the information</md-tooltip></i>
+					&nbsp;
+					<b>Information</b>
+				</span>
+				<div id="venn_info" ></div>
+			<br><br>
+			
+			<!--ERROR MESSAGE-->
+			<!--<pre>{{info | json}}</pre>-->
+			<font color="red">{{error}}</font>
+		</md-card-content>
+	<!--</md-card>
+</md-content>-->

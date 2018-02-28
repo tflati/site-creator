@@ -1,0 +1,29 @@
+<md-toolbar class="md-accent">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Project options</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showOption()">
+			<ng-md-icon ng-show="option_visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="option_visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="option_visibility" class="md-whiteframe-4dp myform" flex layout-padding>	
+	<form name="options_form">
+		<md-input-container class="md-block">
+			<label>Filename</label>
+			<input required name="filename" ng-model="file_options.filename">
+			<div ng-messages="options_form.filename.$error">
+				<div ng-message="required">This field is required.</div>
+			</div>
+		</md-input-container>
+		
+		<md-input-container class="md-block">
+			<label>Owner</label>
+			<input required name="owner" ng-model="file_options.owner">
+			<div ng-messages="options_form.owner.$error">
+				<div ng-message="required">This field is required.</div>
+			</div>
+		</md-input-container>
+	</form>
+</md-content>
+<br>

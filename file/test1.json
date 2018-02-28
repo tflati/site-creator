@@ -1,0 +1,669 @@
+{
+    "header": {
+        "type": "widescreen",
+        "title": "My Website!",
+        "title_color": "white",
+        "description": "My website subtitle",
+        "long_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\u00a0<\/p>",
+        "image": {
+            "src": "pianta.jpeg",
+            "src_small": "pianta_small.jpeg"
+        },
+        "logos": [
+            {
+                "image": "logo1.jpg"
+            },
+            {
+                "image": "logo2.jpg"
+            },
+            {
+                "image": "sapienza.png"
+            }
+        ]
+    },
+    "menu": {
+        "type": "sidenav_menu",
+        "elements": [
+            {
+                "name": "Home",
+                "url": "home",
+                "submenu": []
+            },
+            {
+                "name": "Search",
+                "url": "#",
+                "submenu": [
+                    {
+                        "name": "Search 1",
+                        "url": "search1"
+                    },
+                    {
+                        "name": "Search 3",
+                        "url": "search3"
+                    }
+                ]
+            },
+            {
+                "name": "Partners",
+                "url": "www.google.it",
+                "submenu": [
+                    {
+                        "name": "Google",
+                        "url": "https:\/\/www.google.it"
+                    },
+                    {
+                        "name": "Cineca",
+                        "url": "https:\/\/www.cineca.it"
+                    }
+                ]
+            },
+            {
+                "name": "About us",
+                "url": "about_us",
+                "submenu": []
+            }
+        ]
+    },
+    "containers": {
+        "home": "5",
+        "c_list": [
+            {
+                "id": 4,
+                "title": "Home",
+                "url": "home",
+                "show_header": "normal",
+                "show_long_description": true,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 7,
+                        "type": "image",
+                        "label": "The Galaxy",
+                        "description": "<p>The <b>main image<\/b> in the home page.<\/p>",
+                        "source": "galaxy2.jpeg",
+                        "image_position": "before_text"
+                    },
+                    {
+                        "id": 11,
+                        "type": "datatable",
+                        "label": "Person",
+                        "description": "<p>A simple <b><u>datatable<\/u><\/b> example<\/p>",
+                        "source": "",
+                        "row_page": "5",
+                        "demo": true,
+                        "use_pagination": true,
+                        "use_header": true
+                    },
+                    {
+                        "id": 13,
+                        "type": "chart",
+                        "label": "Classes doughnut",
+                        "description": "<p>Number of student for each class 2017\u00a0<\/p><h4>Doughnut<\/h4>",
+                        "source": "",
+                        "chart_type": "doughnut_chart",
+                        "demo": true
+                    },
+                    {
+                        "id": 14,
+                        "type": "datatable",
+                        "label": "Classes table",
+                        "description": "Number of student for each class",
+                        "source": "script\/demo_chart\/demo1.json",
+                        "row_page": "5",
+                        "demo": false
+                    },
+                    {
+                        "id": 15,
+                        "type": "chart",
+                        "label": "Classes pie",
+                        "description": "Number of student for each class 2017",
+                        "source": "",
+                        "chart_type": "pie_chart",
+                        "demo": true
+                    },
+                    {
+                        "id": 16,
+                        "type": "chart",
+                        "label": "Classes polar area",
+                        "description": "Number of student for each class 2017",
+                        "source": "",
+                        "chart_type": "polar_area_chart",
+                        "demo": true
+                    },
+                    {
+                        "id": 17,
+                        "type": "chart",
+                        "label": "Classes radar",
+                        "description": "Number of student for each class 2016-2017",
+                        "source": "",
+                        "chart_type": "radar_chart",
+                        "demo": true
+                    },
+                    {
+                        "id": 18,
+                        "type": "chart",
+                        "label": "Classes bar",
+                        "description": "Number of student for each class 2016-2017",
+                        "source": "",
+                        "chart_type": "bar_chart",
+                        "demo": true
+                    },
+                    {
+                        "id": 19,
+                        "type": "chart",
+                        "label": "Classes horizontal bar",
+                        "description": "Number of student for each class 2016-2017",
+                        "source": "",
+                        "chart_type": "horizontal_bar_chart",
+                        "demo": true
+                    },
+                    {
+                        "id": 20,
+                        "type": "chart",
+                        "label": "Classes line chart",
+                        "description": "Number of student for each class",
+                        "source": "",
+                        "chart_type": "line_chart",
+                        "demo": true
+                    },
+                    {
+                        "id": 21,
+                        "type": "form",
+                        "label": "Registration",
+                        "key": "regi",
+                        "description": "<p>A simple <i>registration<\/i> form<\/p>",
+                        "fields": [
+                            {
+                                "type": "text",
+                                "label": "Surname",
+                                "key": "surname",
+                                "hint": "",
+                                "default_value": "",
+                                "required": false
+                            },
+                            {
+                                "type": "text",
+                                "label": "Name",
+                                "key": "name",
+                                "hint": "",
+                                "default_value": "Francesco",
+                                "required": true
+                            },
+                            {
+                                "type": "radio",
+                                "label": "Gender",
+                                "key": "gender",
+                                "dynamic": false,
+                                "source_url": "",
+                                "elements": [
+                                    {
+                                        "name": "Male",
+                                        "value": "m"
+                                    },
+                                    {
+                                        "name": "Female",
+                                        "value": "f"
+                                    }
+                                ],
+                                "required": true
+                            },
+                            {
+                                "type": "date",
+                                "label": "Date of birth",
+                                "key": "date",
+                                "hint": "",
+                                "default_value": null,
+                                "required": false
+                            },
+                            {
+                                "type": "email",
+                                "label": "Email",
+                                "key": "email",
+                                "hint": "How can we reach you?",
+                                "default_value": "",
+                                "required": true
+                            },
+                            {
+                                "type": "password",
+                                "label": "Password",
+                                "key": "password",
+                                "hint": "",
+                                "required": true
+                            },
+                            {
+                                "type": "checkbox",
+                                "label": "Subscribe newsletters",
+                                "key": "news_letter",
+                                "checked": true,
+                                "required": false
+                            },
+                            {
+                                "type": "checkbox",
+                                "label": "I accept the terms of service.",
+                                "key": "service_term",
+                                "checked": false,
+                                "required": true
+                            },
+                            {
+                                "type": "radio",
+                                "label": "Your favorite hobby?",
+                                "key": "hobby",
+                                "dynamic": true,
+                                "source_url": "json\/demo.json",
+                                "elements": [],
+                                "required": false
+                            },
+                            {
+                                "type": "select",
+                                "label": "Favourite class",
+                                "key": "f_class",
+                                "autocomplete": true,
+                                "dynamic": true,
+                                "source_url": "json\/demo{number}.json",
+                                "elements": [],
+                                "multiple": false,
+                                "required": true
+                            }
+                        ],
+                        "submit": {
+                            "label": "Send",
+                            "url": "script\/prova.php"
+                        }
+                    },
+                    {
+                        "id": 22,
+                        "type": "image",
+                        "label": "A Car",
+                        "description": "A beatifull car",
+                        "source": "dan-gold-223935.jpg",
+                        "image_position": "before_text"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "About us",
+                "url": "about_us",
+                "show_header": "normal",
+                "show_long_description": false,
+                "show_logos": false,
+                "elements": [
+                    {
+                        "id": 31,
+                        "type": "wordcloud",
+                        "label": "Nuvola",
+                        "description": "<p>A word cloud <b>!!!<\/b><br\/><\/p>",
+                        "width": 700,
+                        "height": 300,
+                        "shape": "elliptic",
+                        "source": "",
+                        "demo": true
+                    },
+                    {
+                        "id": 32,
+                        "type": "venn",
+                        "label": "Diagram 1",
+                        "description": "<p>A simple <b>Venn diagram<\/b> example<\/p>",
+                        "source": "",
+                        "demo": true
+                    },
+                    {
+                        "id": 33,
+                        "type": "datatable",
+                        "label": "The Venn Table",
+                        "description": "<p>Il diagramma di <b>Venn<\/b> rappresentato come una tabella<\/p>",
+                        "source": "",
+                        "row_page": "5",
+                        "demo": true
+                    },
+                    {
+                        "id": 35,
+                        "type": "datatable",
+                        "label": "test",
+                        "description": "",
+                        "source": "script\/demo_chart\/demo1.json",
+                        "use_header": false,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    }
+                ]
+            }
+        ]
+    },
+    "layout": {
+        "selected": {
+            "type": "container",
+            "type_name": "grid2",
+            "label": "Grid 2 columns",
+            "id": 7,
+            "columns": [
+                [
+                    {
+                        "type": "item",
+                        "id": 31
+                    }
+                ],
+                [
+                    {
+                        "type": "item",
+                        "id": 29
+                    }
+                ]
+            ]
+        },
+        "templates": [
+            {
+                "type": "container",
+                "type_name": "grid1",
+                "label": "Grid 1 column",
+                "id": 3,
+                "columns": [
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid2",
+                "label": "Grid 2 columns",
+                "id": 10,
+                "columns": [
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid3",
+                "label": "Grid 3 columns",
+                "id": 6,
+                "columns": [
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid4",
+                "label": "Grid 4 columns",
+                "id": 25,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid5",
+                "label": "Grid 5 columns",
+                "id": 51,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid6",
+                "label": "Grid 6 columns",
+                "id": 52,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "group",
+                "type_name": "group",
+                "label": "Group",
+                "id": 55,
+                "column": [
+                    []
+                ]
+            }
+        ],
+        "dropzones": {
+            "4": [
+                {
+                    "type": "container",
+                    "type_name": "grid6",
+                    "label": "Grid 6 columns",
+                    "id": 51,
+                    "columns": [
+                        [],
+                        [],
+                        [],
+                        [],
+                        [],
+                        []
+                    ]
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid4",
+                    "label": "Grid 4 columns",
+                    "id": 23,
+                    "columns": [
+                        [],
+                        [],
+                        [],
+                        []
+                    ]
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid3",
+                    "label": "Grid 3 columns",
+                    "id": 5,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 13
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 15
+                            },
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 18
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 16
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "item",
+                    "parent_container": "4",
+                    "id": 21
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid3",
+                    "label": "Grid 3 columns",
+                    "id": 4,
+                    "columns": [
+                        [],
+                        [],
+                        []
+                    ]
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid1",
+                    "label": "Grid 1 column",
+                    "id": 2,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 11
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 3,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 7
+                            },
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 22
+                            }
+                        ],
+                        []
+                    ]
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 5,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 14
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "parent_container": "4",
+                                "id": 17
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "item",
+                    "parent_container": "4",
+                    "id": 20
+                },
+                {
+                    "type": "item",
+                    "parent_container": "4",
+                    "id": 19
+                }
+            ],
+            "5": [
+                {
+                    "type": "item",
+                    "id": 31
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 9,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "id": 32
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "id": 33
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "item",
+                    "parent_container": "5",
+                    "id": 23
+                },
+                {
+                    "type": "item",
+                    "parent_container": "5",
+                    "id": 24
+                },
+                {
+                    "type": "item",
+                    "parent_container": "5",
+                    "id": 25
+                },
+                {
+                    "type": "item",
+                    "parent_container": "5",
+                    "id": 26
+                },
+                {
+                    "type": "item",
+                    "parent_container": "5",
+                    "id": 27
+                },
+                {
+                    "type": "item",
+                    "id": 29
+                },
+                {
+                    "type": "item",
+                    "id": 35
+                }
+            ]
+        }
+    },
+    "footer": {
+        "license": "Cineca 2017",
+        "license_position": "center"
+    },
+    "variables": {
+        "open_tag": "{",
+        "close_tag": "}",
+        "variables_list": [
+            {
+                "key": "number",
+                "default_value": "2"
+            },
+            {
+                "key": "demo",
+                "default_value": "lista"
+            },
+            {
+                "key": "n",
+                "default_value": "1"
+            },
+            {
+                "key": "table",
+                "default_value": "1"
+            }
+        ]
+    }
+}

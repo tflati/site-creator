@@ -1,0 +1,189 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "algorithm",
+				"header": "Algorithm",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "del",
+				"header": "del",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "ins",
+				"header": "ins",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "snp",
+				"header": "snp",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "complex",
+				"header": "complex",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "mnp",
+				"header": "mnp",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "algorithm": [
+				{
+					"type": "text",
+					"label": "BCF Tools",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"del": [
+				{
+					"type": "number",
+					"value": "496384"
+				}
+			],
+			"ins": [
+				{
+					"type": "number",
+					"value": "423918"
+				}
+			],
+			"snp": [
+				{
+					"type": "number",
+					"value": "8971665"
+				}
+			],
+			"complex": [
+				{
+					"type": "number",
+					"value": "0"
+				}
+			],
+			"mnp": [
+				{
+					"type": "number",
+					"value": "0"
+				}
+			]
+		},
+		{
+		    "algorithm": [
+				{
+					"type": "text",
+					"label": "GATK",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"del": [
+				{
+					"type": "number",
+					"value": "804326"
+				}
+			],
+			"ins": [
+				{
+					"type": "number",
+					"value": "675818"
+				}
+			],
+			"snp": [
+				{
+					"type": "number",
+					"value": "8578223"
+				}
+			],
+			"complex": [
+				{
+					"type": "number",
+					"value": "0"
+				}
+			],
+			"mnp": [
+				{
+					"type": "number",
+					"value": "0"
+				}
+			]
+		},
+		{
+		    "algorithm": [
+				{
+					"type": "text",
+					"label": "FREEBAYES",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"del": [
+				{
+					"type": "number",
+					"value": "301859"
+				}
+			],
+			"ins": [
+				{
+					"type": "number",
+					"value": "273208"
+				}
+			],
+			"snp": [
+				{
+					"type": "number",
+					"value": "6193981"
+				}
+			],
+			"complex": [
+				{
+					"type": "number",
+					"value": "82258"
+				}
+			],
+			"mnp": [
+				{
+					"type": "number",
+					"value": "484519"
+				}
+			]
+		}
+	]
+}

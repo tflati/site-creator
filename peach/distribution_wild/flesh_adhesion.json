@@ -1,0 +1,83 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "adhesion",
+				"header": "Adhesion",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "adhesion": [
+				{
+					"type": "text",
+					"label": "Clingstone",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			]
+		},
+		{
+		    "adhesion": [
+				{
+					"type": "text",
+					"label": "Freestone",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "11"
+				}
+			]
+		},
+		{
+		    "adhesion": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "5"
+				}
+			]
+		}
+	]
+}

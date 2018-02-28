@@ -1,0 +1,132 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "id",
+				"tooltip": "id",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": false
+			},
+			{
+				"label": "Class",
+				"tooltip": "Class",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "Number of student",
+				"tooltip": "Number of student",
+				"filters": {
+					"title": "Chose a name:",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "4",
+	"hits": [
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			],
+		    "Class": [
+				{
+					"type": "text",
+					"label": "Computer science",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Number of student": [
+				{
+					"type": "number",
+					"value": "300"
+				}
+			]
+		},
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "2"
+				}
+			],
+		    "Class": [
+				{
+					"type": "text",
+					"label": "Law",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Number of student": [
+				{
+					"type": "number",
+					"value": "650"
+				}
+			]
+		},
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			],
+		    "Class": [
+				{
+					"type": "text",
+					"label": "Chemestry",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Number of student": [
+				{
+					"type": "number",
+					"value": "220"
+				}
+			]
+		},
+		{
+			"id": [
+				{
+					"type": "number",
+					"value": "4"
+				}
+			],
+		    "Class": [
+				{
+					"type": "text",
+					"label": "Economy",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"Number of student": [
+				{
+					"type": "number",
+					"value": "400"
+				}
+			]
+		}			
+	]
+}

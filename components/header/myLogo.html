@@ -1,0 +1,16 @@
+<div layout-gt-sm="row">
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Image</label>
+		<input ng-model="myElement.image">
+	</md-input-container>
+	<md-button class="md-icon-button md-accent" aria-label="Upload" ngf-select="uploadLogo($file, $invalidFiles)"
+				accept="image/*" ngf-max-size="10MB">
+		<ng-md-icon icon="file_upload" style="fill: #E91E63" size="20"></ng-md-icon> 
+	</md-button>
+	<md-button class="md-icon-button md-accent" aria-label="Delete" ng-click="deleteLogo()">
+		<ng-md-icon icon="delete" style="fill: #E91E63" size="20"></ng-md-icon> 
+	</md-button>
+</div>
+<md-progress-linear md-mode="determinate" value="{{f.progress}}" ng-show="f.progress >= 0 && f.progress <= 99"></md-progress-linear>
+<div style="font:smaller">{{errFile.name}} <font color="red">{{errFile.$error}} {{errFile.$errorParam}}</font></div>     
+{{errorMsg}}

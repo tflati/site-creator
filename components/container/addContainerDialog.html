@@ -1,0 +1,35 @@
+<md-dialog>
+	<form ng-cloak>
+		<md-toolbar>
+		  <div class="md-toolbar-tools">
+			<h2>Add Container</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<ng-md-icon icon="close" style="fill: white"></ng-md-icon> 
+			</md-button>
+		  </div>
+		</md-toolbar>
+
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<p><b>Choose an existing menu item or create a new container</b></p><br>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Container name</label>
+					<md-select ng-model="choices.container">
+						<md-option value=""> -- </md-option>
+						<md-option ng-repeat="container in locals.container_list" ng-value="container">
+							{{container.name}}
+						</md-option>
+					</md-select>
+				</md-input-container><br>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>New container name</label>
+					<input ng-model="choices.new_container">
+				</md-input-container>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<md-button class="md-raised md-primary" ng-click="answer(choices)">Add</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

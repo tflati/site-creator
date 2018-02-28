@@ -1,0 +1,65 @@
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Slider: {{myElement.label}}</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteSlider()">	
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showSlider()">
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>
+	
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Label</label>
+		<input ng-model="myElement.label"  style="color:black;">
+	</md-input-container>
+
+	<md-input-container class="md-block">
+		<label>Description</label><br>
+		<div text-angular ng-model="myElement.description" style="border:solid; border-color:#ccc;"></div>
+	</md-input-container>
+
+	<md-input-container class="md-block">
+		<label>Min value</label>
+		<input ng-model="myElement.min_value" type="number" step="5" min="0" style="color:black;"/>
+	</md-input-container>
+
+	<md-input-container class="md-block">
+		<label>Max value</label>
+		<input ng-model="myElement.max_value" type="number" step="5" min="0" style="color:black;"/>
+	</md-input-container>
+
+	<md-input-container class="md-block">
+		<label>Step value</label>
+		<input ng-model="myElement.step_value" type="number" step="5" min="0" style="color:black;"/>
+	</md-input-container>
+
+	 <md-input-container class="md-block">
+		<label>Choose a variable</label>
+		<md-select ng-model="myElement.variable">
+			<md-option></md-option>
+			<md-option ng-repeat="variable in variables_list" ng-value="variable.key" >
+			  {{variable.key}}
+			</md-option>
+		</md-select>
+	</md-input-container>
+		
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Add new variable</label>
+		<input ng-model="new_var"  style="color:black;">
+		<div ng-show="new_variables.length > 0">
+			&nbsp;<br>
+			<font color="#F44336">New variables detect!</font><br>
+			Click on chips for add the variable
+			<md-chips ng-model="new_variables" readonly="true" md-transform-chip="" md-removable="false">
+				<md-chip-template>
+					<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+				</md-chip-template>
+			</md-chips>
+		</div>
+	</md-input-container>
+</md-content>
+<br>

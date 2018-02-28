@@ -1,0 +1,300 @@
+{
+    "header": {
+        "type": "normal",
+        "title": "Bufalo",
+        "title_color": "white",
+        "description": "",
+        "long_description": "<p>RNA-seq data were downloaded from NCBI at the following link: <a target=\"_blank\" href=\"https:\/\/www.ncbi.nlm.nih.gov\/genome\/annotation_euk\/Bubalus_bubalis\/100\/\"> https:\/\/www.ncbi.nlm.nih.gov\/genome\/annotation_euk\/Bubalus_bubalis\/100\/ <\/a>. 30 different tissues were analyzed according to the bioinformatics protocol described in <a target=\"_blank\" href=\"http:\/\/www.nature.com\/nprot\/journal\/v11\/n9\/full\/nprot.2016.095.html\"> Nature Protocols <\/a> paper.<br\/><\/p>",
+        "image": {
+            "src": "http:\/\/hpc-bioinformatics.cineca.it\/buffalo\/razza-bufalo.jpg",
+            "src_small": "razza-bufalo.jpg"
+        },
+        "logos": [
+            {
+                "image": "http:\/\/www.procedamus.it\/images\/CINECA.jpg"
+            }
+        ]
+    },
+    "menu": {
+        "type": "menu_bar",
+        "elements": [
+            {
+                "name": "Home",
+                "url": "#home",
+                "submenu": []
+            },
+            {
+                "name": "Search",
+                "url": "#search",
+                "submenu": [
+                    {
+                        "name": "Search by fold change value",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Search by gene feature",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Search by Gene symbol",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Search by Tissue",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Differential expression analysis",
+                        "url": "#"
+                    }
+                ]
+            },
+            {
+                "name": "Statistics",
+                "url": "#",
+                "submenu": [
+                    {
+                        "name": "Dataset statistics",
+                        "url": "#"
+                    },
+                    {
+                        "name": "Dataset information",
+                        "url": "#"
+                    }
+                ]
+            },
+            {
+                "name": "JBrowse",
+                "url": "#",
+                "submenu": []
+            },
+            {
+                "name": "Downloads",
+                "url": "#downloads",
+                "submenu": []
+            },
+            {
+                "name": "Contacts",
+                "url": "#contacts",
+                "submenu": []
+            },
+            {
+                "name": "Help",
+                "url": "#help",
+                "submenu": []
+            }
+        ]
+    },
+    "containers": {
+        "home": "",
+        "c_list": [
+            {
+                "id": 1,
+                "title": "Contacts",
+                "url": "#contacts",
+                "show_header": "small",
+                "show_long_description": true,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 1,
+                        "type": "text",
+                        "label": "Contacts",
+                        "description": "<p><span style=\"vertical-align: middle;\" class=\"ng-binding ng-scope\"><br\/><\/span><\/p><p><span style=\"vertical-align: middle;\" class=\"ng-binding ng-scope\">Ente ricercatore:<\/span><\/p><div class=\"ng-scope\"><ul><li class=\"ng-scope\">Pallino Pinco<\/li><li class=\"ng-scope\"><p class=\"ng-binding\">Doe John<\/p><br\/>\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0<\/li><\/ul><\/div>"
+                    },
+                    {
+                        "id": 2,
+                        "type": "image",
+                        "label": "Immagine bufalo",
+                        "description": "<p><img src=\"http:\/\/hpc-bioinformatics.cineca.it\/buffalo\/razza-bufalo.jpg\"\/>\u200b<\/p>",
+                        "source": "",
+                        "image_position": ""
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Downloads",
+                "url": "#downloads",
+                "show_header": "small",
+                "show_long_description": true,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 3,
+                        "type": "text",
+                        "label": "Download data",
+                        "description": "<p>Here you can download gff files from all the samples considered<br\/><\/p>"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Help",
+                "url": "#help",
+                "show_header": "hidden",
+                "show_long_description": true,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 4,
+                        "type": "text",
+                        "label": "Help",
+                        "description": "<p><b>potesne adiuvare me?<\/b><br\/><\/p><p>Ita quaeso!<br\/><\/p>"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Home",
+                "url": "#home",
+                "show_header": "normal",
+                "show_long_description": true,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 5,
+                        "type": "text",
+                        "label": "A box with somenthing",
+                        "description": "<p>Some Api Url to do stuff<br\/><\/p>"
+                    },
+                    {
+                        "id": 6,
+                        "type": "text",
+                        "label": "CharBar Box - Needed an API",
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "layout": {
+        "selected": {
+            "type": "item",
+            "id": 1
+        },
+        "templates": [
+            {
+                "type": "container",
+                "type_name": "grid1",
+                "label": "Grid 1 column",
+                "id": 1,
+                "column": [
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid2",
+                "label": "Grid 2 columns",
+                "id": 2,
+                "columns": [
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid3",
+                "label": "Grid 3 columns",
+                "id": 3,
+                "columns": [
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid4",
+                "label": "Grid 4 columns",
+                "id": 4,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid5",
+                "label": "Grid 5 columns",
+                "id": 5,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid6",
+                "label": "Grid 6 columns",
+                "id": 6,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "group",
+                "type_name": "group",
+                "label": "Group",
+                "id": 7,
+                "columns": [
+                    []
+                ]
+            }
+        ],
+        "dropzones": {
+            "1": [
+                {
+                    "type": "item",
+                    "id": 1
+                },
+                {
+                    "type": "item",
+                    "id": 2
+                }
+            ],
+            "2": [
+                {
+                    "type": "item",
+                    "id": 3
+                }
+            ],
+            "3": [
+                {
+                    "type": "item",
+                    "id": 4
+                }
+            ],
+            "4": [
+                {
+                    "type": "item",
+                    "id": 5
+                },
+                {
+                    "type": "item",
+                    "id": 6
+                }
+            ]
+        }
+    },
+    "footer": {
+        "license": "<p><img alt=\"Creative Commons License\" src=\"https:\/\/i.creativecommons.org\/l\/by-nc\/4.0\/88x31.png\"\/><br\/><\/p><p>This work is licensed under a <a rel=\"license\" href=\"http:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/\">Creative Commons Attribution-NonCommercial 4.0 International License<\/a>.<br\/><\/p>",
+        "license_position": "center"
+    },
+    "variables": {
+        "open_tag": "{",
+        "close_tag": "}",
+        "variables_list": []
+    }
+}

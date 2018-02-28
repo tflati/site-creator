@@ -1,0 +1,83 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "flesh_firmness",
+				"header": "Flesh firmness",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "flesh_firmness": [
+				{
+					"type": "text",
+					"label": "Melting",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "96"
+				}
+			]
+		},
+		{
+		    "flesh_firmness": [
+				{
+					"type": "text",
+					"label": "Non-melting",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "18"
+				}
+			]
+		},
+		{
+		    "flesh_firmness": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "10"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,35 @@
+<form name="variables_form">
+	<md-input-container class="md-block">
+		<label>Open tag</label>
+		<input required name="openTag" ng-model="active_file.variables.open_tag">
+		<div ng-messages="variables_form.openTag.$error">
+			<div ng-message="required">This field is required.</div>
+		</div>
+	</md-input-container>
+	<md-input-container class="md-block">
+		<label>Close tag</label>
+		<input required name="closeTag" ng-model="active_file.variables.close_tag">
+		<div ng-messages="variables_form.closeTag.$error">
+			<div ng-message="required">This field is required.</div>
+		</div>
+	</md-input-container>
+	<b>Variables list</b><br>
+	<div ng-repeat="variable in active_file.variables.variables_list">
+		<div layout-gt-sm="row">
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Key</label>
+				<input ng-model="variable.key">
+			</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Default Value</label>
+				<input ng-model="variable.default_value">
+			</md-input-container>
+			<md-button class="md-icon-button md-accent" aria-label="Delete" ng-click="deleteElement(active_file.variables.variables_list,$index)">
+				<ng-md-icon icon="delete" style="fill: #E91E63" size="20"></ng-md-icon> 
+			</md-button>
+		</div>
+	</div>
+	<div align="right">
+		<md-button class="md-raised md-primary" ng-click="addVariable()">Add Variable</md-button>
+	</div>
+</form>

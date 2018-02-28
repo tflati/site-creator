@@ -1,0 +1,1624 @@
+{
+    "header": {
+        "type": "normal",
+        "title": "PeachVar-DB Portal",
+        "title_color": "white",
+        "long_description": "",
+        "image": {
+            "src": "peach_portal.jpg",
+            "src_small": "peach_portal.jpg"
+        },
+        "logos": [
+            {
+                "image": "logo1.jpg"
+            },
+            {
+                "image": "logo2.jpg"
+            }
+        ],
+        "description": "<br><b>PeachVar-DB<\/b>: interactive browsing and visualization of a curated collection of peach genetic variation data obtained from whole-genome resequencing experiments"
+    },
+    "menu": {
+        "type": "sidenav_menu",
+        "elements": [
+            {
+                "name": "Home",
+                "url": "main",
+                "submenu": []
+            },
+            {
+                "name": "Search",
+                "url": "#",
+                "submenu": [
+                    {
+                        "name": "Search by region",
+                        "url": "search_by_region"
+                    },
+                    {
+                        "name": "Search by gene feature",
+                        "url": "search_by_gene_type"
+                    },
+                    {
+                        "name": "Search by gene ID",
+                        "url": "search_by_gene_name"
+                    },
+                    {
+                        "name": "Search by accession",
+                        "url": "search_by_cultivar"
+                    },
+                    {
+                        "name": "Search by sequence similarity",
+                        "url": "launch_blast"
+                    },
+                    {
+                        "name": "Pairwise accession comparison",
+                        "url": "evaluate_differences_between_two_cultivars"
+                    }
+                ]
+            },
+            {
+                "name": "Accession info",
+                "url": "#",
+                "submenu": [
+                    {
+                        "name": "Dataset information",
+                        "url": "dataset"
+                    },
+                    {
+                        "name": "Population structure",
+                        "url": "population_structure"
+                    },
+                    {
+                        "name": "Phylogenesis",
+                        "url": "phylogenesis"
+                    },
+                    {
+                        "name": "Phenotypic data",
+                        "url": "phenotypic_data"
+                    }
+                ]
+            },
+            {
+                "name": "JBrowse",
+                "url": "jbrowse",
+                "submenu": []
+            },
+            {
+                "name": "Downloads",
+                "url": "downloads",
+                "submenu": []
+            },
+            {
+                "name": "Statistics",
+                "url": "statistic",
+                "submenu": []
+            },
+            {
+                "name": "Contacts",
+                "url": "contact",
+                "submenu": []
+            },
+            {
+                "name": "About",
+                "url": "about",
+                "submenu": []
+            },
+            {
+                "name": "Help",
+                "url": "help",
+                "submenu": []
+            }
+        ]
+    },
+    "containers": {
+        "home": "12",
+        "c_list": [
+            {
+                "id": 1,
+                "title": "About",
+                "url": "about",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 1,
+                        "type": "text",
+                        "label": "",
+                        "description": "<p><b>PeachVar-DB<\/b> is an open-source catalog of genetic variants present in peach (P. persica L. Batsch) and wild-related species of Prunus genera, annotated from 146 publicly released Whole Genome Re-Sequencing experiments hosted under the Sequence Reads Archive (SRA). The current database release is assembled onto peach reference genome version v2.0 and contains a total of 4,630,814 SNPs and 461,785 INDELs, identified through the intersection of the results from three variant-calling algorithms: GATK, BCFtools and FreeBayes. The detected peach variants derive from a selection of high confident and accurate consensus call set obtained by comparing the results of each variant calling algorithm and reporting only those supported by all algorithms.<br\/><\/p>"
+                    },
+                    {
+                        "id": 2,
+                        "type": "text",
+                        "label": "Description",
+                        "description": "<p>The web interface of Peach-VarDB provides several tools for searching and downloading SNP and INDEL variants under the Searching menu:<\/p><ul><li>&#65279;<b>Search by region<\/b> function for retrieving the selected variant type (SNP or INDEL) in specific genomic region;<\/li><br\/><li><b>Search by gene<\/b> <b>features <\/b>function for retrieving all variants within user defined gene models;<\/li><br\/><li><b>Search by gene ID<\/b> function for retrieving all variants within a particular gene of interest (transcripts are coded based on the JGI nomenclature for peach genome v2.1 annotations);<\/li><br\/><li><b>Search by accession<\/b> function for navigating within all the variants identified in the queried accession;<\/li><br\/><li><b>Search by sequence similarity<\/b> function for BLAST search against the peach genome assembly;<\/li><br\/><li><b>Pairwise accession comparison<\/b> function for pairwise genotype comparisons between two selected accessions.<\/li><\/ul><p>The results from each query, are integrated with a range of additional annotations, including BioSample\/BioProject information, peach mapped genetic markers, syntenic maps, gene homologous, Gene Ontology (GO) annotations and links to genetic variants previously identified through SNP array technologies and provide by GDR portal (<a href=\"https:\/\/www.rosaceae.org\/\" target=\"_blank\">https:\/\/www.rosaceae.org\/<\/a>).<br\/><\/p><p>The 'Accession info' section provides a <b>dataset information<\/b> of the accession panel and related resources (SRA and Bioproject), <b>population structure<\/b>, <b>phylogenesis <\/b>and <b>basic phenotypic data<\/b>.<br\/><\/p><p>PeachVar-DB integrates a JBrowse interface (<a href=\"http:\/\/hpc-bioinformatics.cineca.it\/jbrowse\/JBrowse-1.12.1\/index.html?data=data%2FpersicaV2\" target=\"_blank\">http:\/\/hpc-bioinformatics.cineca.it\/jbrowse\/JBrowse-1.12.1\/index.html?data=data%2FpersicaV2<\/a>) for a panning and zooming navigation of the peach reference genome, and including gene models, putative orthologous from other species (cherry, rice and Arabidopsis thaliana) and the direct visualization of SNPs\/INDELs location. Furthermore, the user can load and visualize a custom track file (gff, VCF, SAM or BAM format). The user should ensure that the coordinates system present in his custom file correspond to the 2.0 version of peach reference genome. The Statistics section provides a range of useful statistics about the number of annotated variants, whole-genome linkage disequilibrium patterns, SNP density, nucleotide diversity and gene density are shown in a dynamical summary or interactive histograms.<br\/><\/p>"
+                    },
+                    {
+                        "id": 3,
+                        "type": "text",
+                        "label": "Web architecture",
+                        "description": "<p>PeachVar-DB is developed on the AngularJS framework (v. 1.6.4) which presents data in a dynamic manner within a single-page application (SPA). The graphical user interface has been implemented through Angular material library (v. 1.1.4), a reference implementation of Google's Material Design Specification. The front-end relies also on third-party graphical libraries, such as d3, angular-chart and md-data-table.<\/p>"
+                    },
+                    {
+                        "id": 4,
+                        "type": "text",
+                        "label": "Funding",
+                        "description": "<p>Peach-VarDB is funded by the LISA Initiative, supported in equal parts by Regione Lombardia and Consortium CINECA; Italian Node of Elixir project (<a href=\"http:\/\/elixir-italy.org\" target=\"_blank\">http:\/\/elixir-italy.org<\/a>) for high performance computing resources. This work is also funded by the University of Milan and MasPes project.<\/p>"
+                    },
+                    {
+                        "id": 5,
+                        "type": "text",
+                        "label": "Useful links",
+                        "description": "<p>Genome Database for Rosaceae (GDR, <a href=\"http:\/\/www.rosaceae.org\" target=\"_blank\">http:\/\/www.rosaceae.org<\/a>), the long-standing central repository and data mining resource for Rosaceae research.Phytozome V12.1 (<a href=\"https:\/\/phytozome.jgi.doe.gov\" target=\"_blank\">https:\/\/phytozome.jgi.doe.gov<\/a>), a comparative platform for green plant genomics.<\/p>"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Help",
+                "url": "help",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 6,
+                        "type": "customlist",
+                        "label": "Help",
+                        "description": "",
+                        "dynamic": false,
+                        "source": "",
+                        "items": [
+                            {
+                                "use_image": false,
+                                "image": "",
+                                "icon": "fa-question-circle",
+                                "icon_color": "orange",
+                                "title": "What is PeachVar-DB portal?",
+                                "subtitle": "",
+                                "text": "<p>PeachVar-DB is an open-source catalog of genetic variants present in peach (P. persica L. Batsch) and wild-related species of Prunus genera, annotated from 146 Whole Genome Re-Sequencing (WGRS) experiments publicly released on Sequence Reads Archive (SRA). Our scope is to make quickly and easily accessible a large amount of information from WGRS projects for a range of purposes, spacing from genotyping to functional genomics. The web interface of the database is designed for an intuitive and user-friendly exploration and provides several tools for searching and downloading the data, along with useful data statistics and information.<\/p><p><br\/><\/p>",
+                                "icon_dim": "fa-3x"
+                            },
+                            {
+                                "use_image": false,
+                                "image": "",
+                                "icon": "fa-question-circle",
+                                "icon_color": "orange",
+                                "title": "How do I access PeachVar-DB?",
+                                "subtitle": "",
+                                "text": "<p>The access to PeachVar-DB is public and free.<\/p>",
+                                "icon_dim": "fa-3x"
+                            },
+                            {
+                                "use_image": false,
+                                "image": "",
+                                "icon": "fa-question-circle",
+                                "icon_color": "orange",
+                                "title": "How do I cite PeachVar-DB?",
+                                "subtitle": "",
+                                "text": "<p><span style=\"color: rgba(0, 0, 0, 0.87);font-size: 14px;float: none;\">We have published our Journal Article on\u00a0<\/span><a href=\"https:\/\/academic.oup.com\/pcp\/search-results?page=1&amp;q=PeachVar-DB&amp;fl_SiteID=5339&amp;allJournals=1&amp;SearchSourceType=1\" target=\"_blank\" style=\"font-size: 14px;\">PCP Plant &amp; Cell Physiology (Oxford Academic):<\/a><br style=\"color: rgba(0, 0, 0, 0.87);font-size: 14px;\"\/><a href=\"https:\/\/www.ncbi.nlm.nih.gov\/pubmed\/29216377\" target=\"_blank\" style=\"font-size: 14px;\">PeachVar-DB: a curated collection of genetic variations for the interactive analysis of peach genome data<\/a><span style=\"color: rgba(0, 0, 0, 0.87);font-size: 14px;float: none;\">.<\/span><br style=\"color: rgba(0, 0, 0, 0.87);font-size: 14px;\"\/><span style=\"color: rgba(0, 0, 0, 0.87);font-size: 14px;float: none;\">Cirilli M., Flati T., Gioiosa S., Tagliaferri I., Ciacciulli A., Gao Z., Gattolin S., Geuna F., Maggi F., Bottoni P., Rossini L., Bassi D., Castrignan\u00f2 T., Chillemi G.<\/span><!--EndFragment--><\/p><p><br\/><\/p><p><br\/><\/p>",
+                                "icon_dim": "fa-3x"
+                            },
+                            {
+                                "use_image": false,
+                                "image": "",
+                                "icon": "fa-question-circle",
+                                "icon_color": "orange",
+                                "title": "How do I ask questions?",
+                                "subtitle": "",
+                                "text": "<p>Please send an email to <a href=\"mailto:hpc-service-bio@cineca.it\" target=\"\">hpc-service-bio AT cineca.it<\/a>.<\/p>",
+                                "icon_dim": "fa-3x"
+                            },
+                            {
+                                "use_image": false,
+                                "image": "",
+                                "icon": "fa-question-circle",
+                                "icon_color": "orange",
+                                "title": "How can I query PeachVar-DB?",
+                                "subtitle": "",
+                                "text": "<p>We have implemented different types of search panels. You can query by:<\/p><ul><li><b>Region<\/b>: make your query by starting from either a chromosome and\/or positions;\u200b<\/li><li><b>Gene feature<\/b>: include in results 5'UTR, 3'UTR, CDS, primary transcripts and CDS+Introns;<\/li><li><b>Gene ID<\/b>: start your search by gene ID (e.g., Prupe1G000100);<\/li><li><b>Accession<\/b>: see all the genetic variants associated with a given accession.<\/li><\/ul>",
+                                "icon_dim": "fa-3x"
+                            },
+                            {
+                                "use_image": true,
+                                "image": "logo1.jpg",
+                                "icon": "",
+                                "icon_color": "black",
+                                "icon_dim": "3x",
+                                "title": "logo",
+                                "subtitle": "",
+                                "text": "<p>uso immagine<\/p>"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Contacts",
+                "url": "contact",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 7,
+                        "type": "customlist",
+                        "label": "Contacts",
+                        "description": "",
+                        "dynamic": false,
+                        "source": "",
+                        "items": [
+                            {
+                                "use_image": false,
+                                "image": "",
+                                "icon": "fa-users",
+                                "icon_color": "darkgreen",
+                                "title": "",
+                                "subtitle": "",
+                                "text": "<p><b><a href=\"http:\/\/www.disaa.unimi.it\/ecm\/home\" target=\"_blank\">Dipartimento di Scienze Agrarie e Ambientali - Produzione, Territorio, Agroenergia<\/a> dell'Universit\u00e0 degli studi di Milano (UNIMI)<\/b><br\/><\/p><p>Contacts:\u00a0<\/p><ul><li><b>Marco Cirilli<\/b> (marco.cirilli@unimi.it)<\/li><li><b>Filippo Geuna<\/b> (filippo.geuna@unimi.it)<\/li><\/ul><p><br\/><\/p>",
+                                "icon_dim": "fa-3x"
+                            },
+                            {
+                                "use_image": false,
+                                "image": "",
+                                "icon": "fa-users",
+                                "icon_color": "darkgreen",
+                                "title": "",
+                                "subtitle": "",
+                                "text": "<p><b>Consorzio interuniversitario italiano senza scopo di lucro <\/b><a href=\"https:\/\/www.cineca.it\/\" target=\"_blank\"><b>CINECA<\/b><\/a><\/p><p>Contacts:<\/p><ul><li><b>Giovanni Chillemi<\/b> (g.chillemi@cineca.it)<\/li><li><b>Tiziana Castrignan\u00f2<\/b> (t.castrignano@cineca.it)<\/li><li><b>Silvia Gioiosa<\/b> (s.gioiosa@cineca.it)<\/li><li><b>Tiziano Flati<\/b> (t.flati@cineca.it)<\/li><li><b>Ilario Tagliaferri <\/b>(i.tagliaferri@cineca.it)<\/li><\/ul>",
+                                "icon_dim": "fa-3x"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "title": "Home",
+                "url": "main",
+                "show_header": "normal",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 9,
+                        "type": "chart",
+                        "label": "Number of variants per accession",
+                        "description": "",
+                        "source": "peach\/persica.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": null,
+                        "width": null,
+                        "demo": false
+                    },
+                    {
+                        "id": 10,
+                        "type": "datatable",
+                        "label": "Global statistic",
+                        "description": "",
+                        "source": "peach\/table_home.json",
+                        "use_header": false,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    },
+                    {
+                        "id": 11,
+                        "type": "datatable",
+                        "label": "",
+                        "description": "",
+                        "source": "peach\/persica.json",
+                        "use_header": true,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    },
+                    {
+                        "id": 12,
+                        "type": "datatable",
+                        "label": "Distribution of types of variants found by each algorithm",
+                        "description": "",
+                        "source": "peach\/distribution.json",
+                        "use_header": true,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    },
+                    {
+                        "id": 75,
+                        "type": "text",
+                        "label": "",
+                        "description": "<p><span style=\"color: rgba(0, 0, 0, 0.87);font-size: medium;float: none;\">Next-generation sequencing technologies applied to many species of horticultural interest are bearing the potential to accelerate the understanding and exploitation of genetic resources.<b> PeachVar-DB<\/b> is an open-source catalog of genetic variants present in peach (P. persica L. Batsch) and wild-related species of Prunus genera, annotated from 146 Whole Genome Re-Sequencing (WGRS) experiments publicly released on Sequence Reads Archive (SRA). Our scope is to make quickly and easily accessible a large amount of information from WGRS projects for a range of purposes, spacing from genotyping to functional genomics. The web interface of the database is designed for an intuitive and user-friendly exploration and provides several tools for searching and downloading the data, along with useful data statistics and information.<\/span><br\/><\/p>"
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "title": "JBrowse",
+                "url": "jbrowse",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 13,
+                        "type": "iframe",
+                        "label": "",
+                        "description": "",
+                        "source": "http:\/\/hpc-bioinformatics.cineca.it\/jbrowse\/JBrowse-1.12.1\/index.html?data=data%2FpersicaV2&loc=CHROMOSOME_ID:START_POSITION..END_POSITION&tracks=MySNPs%2CMyIndels%2CGenes%2CMarkersV2a1%2Crefseqs%2CBlastX_Osativa%2CBlastX_Pavium%2CBlastX_Athaliana&highlight=",
+                        "width": "100%",
+                        "height": "1000px",
+                        "options": "allowfullscreen"
+                    },
+                    {
+                        "id": 14,
+                        "type": "iframe",
+                        "label": "Video youtube",
+                        "description": "<p>Prova di <b>iframe<\/b><\/p>",
+                        "source": "https:\/\/www.youtube.com\/embed\/ozyC9rcc7hI",
+                        "width": "",
+                        "height": "",
+                        "options": "frameborder=\"0\" allowfullscreen"
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "title": "Downloads",
+                "url": "downloads",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 15,
+                        "type": "datatable",
+                        "label": "Download data",
+                        "description": "<p>The variant calling procedure has been performed using three algorithms: Freebayes, GATK and BCFtools and the 146 accessions have been analyzed through a joint variant calling procedure. Only the genetic variants identified by all the three algorithms have been selected in order to obtain a more reliable result. Once obtained, the final joint VCF file has been splitted into individual samples and consequently zipped and indexed with bgzip utility from samtools suite (<a href=\"http:\/\/www.htslib.org\/doc\/tabix.html\" target=\"_blank\">http:\/\/www.htslib.org\/doc\/tabix.html<\/a>). Here you can download the annotated VCF file relative to each of the 146 accessions.<\/p>",
+                        "source": "peach\/download.json",
+                        "use_header": true,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "title": "Dataset information",
+                "url": "dataset",
+                "show_header": "normal",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 16,
+                        "type": "datatable",
+                        "label": "Dataset overview (P. persica (L.) Batsch)",
+                        "description": "",
+                        "source": "peach\/p_persica.json",
+                        "use_header": false,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    },
+                    {
+                        "id": 17,
+                        "type": "datatable",
+                        "label": "Dataset overview (wild-relatives)",
+                        "description": "",
+                        "source": "peach\/wild-relatives.json",
+                        "use_header": false,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "title": "Phylogenesis",
+                "url": "phylogenesis",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 18,
+                        "type": "text",
+                        "label": "",
+                        "description": "<p>The evolutionary relationship among accessions was inferred from whole-genome SNPs data using SNPhylo (filtering and MUSCLE alignment). The dendrogram has been built from pairwise similarity matrix by using a Maximum Likelihood estimate in PhyML 3.0.<\/p>"
+                    },
+                    {
+                        "id": 19,
+                        "type": "ptree",
+                        "label": "",
+                        "description": "",
+                        "source": "peach\/ptree1.json",
+                        "radial": false
+                    },
+                    {
+                        "id": 20,
+                        "type": "button_group",
+                        "label": "Phylogenetic tree",
+                        "description": "",
+                        "layout_g": "row",
+                        "source": "peach\/button.json",
+                        "dynamic": false,
+                        "buttons": [
+                            {
+                                "id": 59,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "download",
+                                    "action_url": "peach\/newick_tree.json",
+                                    "action_variables": []
+                                },
+                                "color": "gold",
+                                "title": "",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "DOWNLOAD NEWICK TREE",
+                                        "title": "",
+                                        "color": "black",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "title": "Phenotypic data",
+                "url": "phenotypic_data",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 28,
+                        "type": "text",
+                        "label": "Phenotypic traits distribution (persica)",
+                        "description": ""
+                    },
+                    {
+                        "id": 29,
+                        "type": "text",
+                        "label": "Details (persica)",
+                        "description": "<p>Click on the pie-charts on the left to display details about the trait of interest.<br\/><\/p>"
+                    },
+                    {
+                        "id": 25,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Origin<\/p>",
+                        "source": "peach\/distribution_persica\/p_origin.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 135,
+                        "demo": false
+                    },
+                    {
+                        "id": 26,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Fruit flesh color<\/p>",
+                        "source": "peach\/distribution_persica\/fruit.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 27,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flesh taste<\/p>",
+                        "source": "peach\/distribution_persica\/flesh.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 30,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flesh adhesion<\/p>",
+                        "source": "peach\/distribution_persica\/adhesion.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 31,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flower shape<\/p>",
+                        "source": "peach\/distribution_persica\/flower_shape.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 32,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flesh firmness<\/p>",
+                        "source": "peach\/distribution_persica\/flesh_firmness.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 33,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Skin hairiness<\/p>",
+                        "source": "peach\/distribution_persica\/skin_hairiness.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 34,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Fruit shape<\/p>",
+                        "source": "peach\/distribution_persica\/fruit_shape.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 35,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flower type<\/p>",
+                        "source": "peach\/distribution_persica\/flower_type.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 23,
+                        "type": "datatable",
+                        "label": "Details of phenotypic traits (persica)",
+                        "description": "",
+                        "source": "peach\/phenotypic_traits_p.json",
+                        "use_header": true,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    },
+                    {
+                        "id": 36,
+                        "type": "text",
+                        "label": "Phenotypic traits distribution (wild-relatives)",
+                        "description": ""
+                    },
+                    {
+                        "id": 37,
+                        "type": "text",
+                        "label": "Details (wild-relatives)",
+                        "description": "<p>Click on the pie-charts on the left to display details about the trait of interest<\/p>"
+                    },
+                    {
+                        "id": 38,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Origin<\/p>",
+                        "source": "peach\/distribution_wild\/origin.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 39,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Fruit flesh color<\/p>",
+                        "source": "peach\/distribution_wild\/fruit.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 40,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flesh taste<\/p>",
+                        "source": "peach\/distribution_wild\/flesh.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 41,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flesh adhesion<\/p>",
+                        "source": "peach\/distribution_wild\/flesh_adhesion.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 42,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flower shape<\/p>",
+                        "source": "peach\/distribution_wild\/flower_shape.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 43,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flesh firmness<\/p>",
+                        "source": "peach\/distribution_wild\/flesh_firmness.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 44,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Skin hairiness<\/p>",
+                        "source": "peach\/distribution_wild\/skin_hairiness.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 45,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Fruit shape<\/p>",
+                        "source": "peach\/distribution_wild\/fruit_shape.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 46,
+                        "type": "chart",
+                        "label": "",
+                        "description": "<p>Flower type A<\/p>",
+                        "source": "peach\/distribution_wild\/ftype.json",
+                        "chart_type": "pie_chart",
+						"stacked": false,
+                        "height": 140,
+                        "width": 140,
+                        "demo": false
+                    },
+                    {
+                        "id": 24,
+                        "type": "datatable",
+                        "label": "Details of phenotypic traits (wild-relatives)",
+                        "description": "",
+                        "source": "peach\/phenotypic_traits_wr.json",
+                        "use_header": true,
+                        "use_pagination": false,
+                        "row_page": "5",
+                        "demo": false
+                    }
+                ]
+            },
+            {
+                "id": 11,
+                "title": "Population structure",
+                "url": "population_structure",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 47,
+                        "type": "text",
+                        "label": "",
+                        "description": "<p>Population structure inferred from 50k randomly selected SNPs in ADMIXTUREv1.22. The analysis is performed by inputting successive values of K (a priori genetic clusters) from 2 to 8. A cross-validation procedure in Admixture software has been used to identify the value of K that maximizes the predictive accuracy (i.e. that minimizes CV-error) based on a 10-fold cross-validation with 10 different fixed initial seeds<\/p>"
+                    },
+                    {
+                        "id": 48,
+                        "type": "button_group",
+                        "label": "Population structure",
+                        "description": "<p>Values on Y-axis indicate the membership probability to each a priori cluster. Admixture model-based simulations were carried out by varying K from 2 to 10 with 10 iterations using all 146 genotypes which showed evident knees at K\u2009=\u20092, differentiating prunus persica from wild relatives. A value of K = 4 explains most of the ancestry within accessions, differentiating the cluster of wild relatives (P4) and ornamental peach (P2) from edible peach (P1 and P3), showing various degree of admixture. For higher values of K, landraces and accessions derived from Oriental and Occidental breeding tend to separate.<\/p>",
+                        "layout_g": "row",
+                        "source": "",
+                        "dynamic": false,
+                        "buttons": [
+                            {
+                                "id": 70,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "write",
+                                    "action_url": "",
+                                    "action_target": "_blank",
+                                    "action_variables": [
+                                        {
+                                            "key": "k_value",
+                                            "value": "2"
+                                        }
+                                    ]
+                                },
+                                "color": "gold",
+                                "title": "",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "K=2",
+                                        "title": "",
+                                        "color": "black",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 71,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "write",
+                                    "action_url": "",
+                                    "action_target": "_blank",
+                                    "action_variables": [
+                                        {
+                                            "key": "k_value",
+                                            "value": "3"
+                                        }
+                                    ]
+                                },
+                                "color": "gold",
+                                "title": "",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "K=3",
+                                        "title": "",
+                                        "color": "black",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 72,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "write",
+                                    "action_url": "",
+                                    "action_target": "_blank",
+                                    "action_variables": [
+                                        {
+                                            "key": "k_value",
+                                            "value": "4"
+                                        }
+                                    ]
+                                },
+                                "color": "gold",
+                                "title": "",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "K=4",
+                                        "title": "",
+                                        "color": "black",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 73,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "write",
+                                    "action_url": "",
+                                    "action_target": "_blank",
+                                    "action_variables": [
+                                        {
+                                            "key": "k_value",
+                                            "value": "5"
+                                        }
+                                    ]
+                                },
+                                "color": "gold",
+                                "title": "",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "K=5",
+                                        "title": "",
+                                        "color": "black",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 74,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "write",
+                                    "action_url": "",
+                                    "action_target": "_blank",
+                                    "action_variables": [
+                                        {
+                                            "key": "k_value",
+                                            "value": "6"
+                                        }
+                                    ]
+                                },
+                                "color": "gold",
+                                "title": "",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "K=6",
+                                        "title": "",
+                                        "color": "black",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 54,
+                        "type": "chart",
+                        "label": "Cross-validation plot",
+                        "description": "<p>A cross-validation procedure has been used to identify the value of K that maximizes the predictive accuracy based on a 10-fold cross-validation with 10 different fixed initial seeds<\/p>",
+                        "source": "peach\/cross-validation-plot.json",
+                        "chart_type": "line_chart",
+						"stacked": false,
+                        "height": null,
+                        "width": 200,
+                        "demo": false
+                    },
+                    {
+                        "id": 62,
+                        "type": "slider",
+                        "label": "TEST",
+                        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+                        "min_value": 4,
+                        "max_value": 6,
+                        "step_value": 1,
+                        "variable": "test"
+                    },
+                    {
+                        "id": 63,
+                        "type": "chart",
+                        "label": "",
+                        "description": "",
+                        "source": "peach\/test\/test{test}.json",
+                        "chart_type": "bar_chart",
+						"stacked": false,
+                        "height": "",
+                        "width": "",
+                        "demo": false
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "title": "Statistics",
+                "url": "statistic",
+                "show_header": "small",
+                "show_long_description": false,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 57,
+                        "type": "wordcloud",
+                        "label": "Accession Cloud",
+                        "description": "<p>Schematic representation of the total number of variants (INDELS and SNPS) in the 146 analyzed accessions of peach and wild-relatives. Size of accession names correlates to the number of associated variants. If the cloud is not visible (e.g., misrendered\/collapsed cloud), please update the page.<\/p>",
+                        "width": 400,
+                        "height": 400,
+                        "shape": "elliptic",
+                        "source": "peach\/accession_cloud.json",
+                        "demo": false
+                    },
+                    {
+                        "id": 61,
+                        "type": "slider",
+                        "label": "SNP density by region (peach)",
+                        "description": "<p>The plot displays the number of SNPs for selected bins (genomic intervals) of predefined size, calculated through the SNPdensity function in VCFtools.<\/p>",
+                        "min_value": 200000,
+                        "max_value": 10000000,
+                        "step_value": 500000,
+                        "variable": "size1"
+                    },
+                    {
+                        "id": 64,
+                        "type": "button_group",
+                        "label": "test",
+                        "description": "<p>test button action<\/p>",
+                        "layout_g": "row",
+                        "source": "",
+                        "dynamic": false,
+                        "buttons": [
+                            {
+                                "id": 65,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "download",
+                                    "action_url": "peach\/newick_tree.json",
+                                    "action_variables": []
+                                },
+                                "color": "#009688",
+                                "title": "download action",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "Download",
+                                        "title": "",
+                                        "color": "white",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 66,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "link",
+                                    "action_url": "https:\/\/www.cineca.it",
+                                    "action_target": "_blank",
+                                    "action_variables": []
+                                },
+                                "color": "orange",
+                                "title": "Link action",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "Link",
+                                        "title": "",
+                                        "color": "white",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 67,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "write",
+                                    "action_url": "",
+                                    "action_target": "_blank",
+                                    "action_variables": [
+                                        {
+                                            "key": "k",
+                                            "value": "4"
+                                        },
+                                        {
+                                            "key": "t",
+                                            "value": "4"
+                                        }
+                                    ]
+                                },
+                                "color": "#3F51B5",
+                                "title": "Write",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "Write 4",
+                                        "title": "",
+                                        "color": "white",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 68,
+                                "type": "button",
+                                "action": {
+                                    "action_type": "write",
+                                    "action_url": "",
+                                    "action_target": "_blank",
+                                    "action_variables": [
+                                        {
+                                            "key": "k",
+                                            "value": "2"
+                                        },
+                                        {
+                                            "key": "t",
+                                            "value": "2"
+                                        }
+                                    ]
+                                },
+                                "color": "#3F51B5",
+                                "title": "Write",
+                                "disabled": false,
+                                "items": [
+                                    {
+                                        "type": "text",
+                                        "label": "write 2",
+                                        "title": "",
+                                        "color": "white",
+                                        "url": "",
+                                        "target": "",
+                                        "pedix": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 69,
+                        "type": "chart",
+                        "label": "Chart demo",
+                        "description": "",
+                        "source": "script\/demo_chart\/demo{k}{t}.json",
+                        "chart_type": "bar_chart",
+						"stacked": false,
+                        "height": "",
+                        "width": "",
+                        "demo": false,
+                        "stacked": true
+                    }
+                ]
+            }
+        ]
+    },
+    "layout": {
+        "selected": {
+            "type": "group",
+            "type_name": "group",
+            "label": "Group",
+            "id": 17,
+            "columns": [
+                [
+                    {
+                        "type": "container",
+                        "type_name": "grid2",
+                        "label": "Grid 2 columns",
+                        "id": 2,
+                        "columns": [
+                            [
+                                {
+                                    "type": "item",
+                                    "id": 10
+                                }
+                            ],
+                            [
+                                {
+                                    "type": "item",
+                                    "id": 9
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            ]
+        },
+        "templates": [
+            {
+                "type": "container",
+                "type_name": "grid1",
+                "label": "Grid 1 column",
+                "id": 2,
+                "columns": [
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid2",
+                "label": "Grid 2 columns",
+                "id": 8,
+                "columns": [
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid3",
+                "label": "Grid 3 columns",
+                "id": 5,
+                "columns": [
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid4",
+                "label": "Grid 4 columns",
+                "id": 4,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid5",
+                "label": "Grid 5 columns",
+                "id": 5,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "container",
+                "type_name": "grid6",
+                "label": "Grid 6 columns",
+                "id": 6,
+                "columns": [
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "type": "group",
+                "type_name": "group",
+                "label": "Group",
+                "id": 19,
+                "columns": [
+                    []
+                ]
+            }
+        ],
+        "dropzones": {
+            "1": [
+                {
+                    "type": "item",
+                    "id": 1
+                },
+                {
+                    "type": "item",
+                    "id": 2
+                },
+                {
+                    "type": "item",
+                    "id": 3
+                },
+                {
+                    "type": "item",
+                    "id": 4
+                },
+                {
+                    "type": "item",
+                    "id": 5
+                }
+            ],
+            "2": [
+                {
+                    "type": "item",
+                    "id": 6
+                }
+            ],
+            "3": [
+                {
+                    "type": "item",
+                    "id": 7
+                }
+            ],
+            "4": [
+                {
+                    "type": "item",
+                    "id": 75
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 2,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "id": 10
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "id": 9
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "item",
+                    "id": 11
+                },
+                {
+                    "type": "item",
+                    "id": 12
+                }
+            ],
+            "6": [
+                {
+                    "type": "item",
+                    "id": 13
+                },
+                {
+                    "type": "item",
+                    "id": 14
+                }
+            ],
+            "7": [
+                {
+                    "type": "item",
+                    "id": 15
+                }
+            ],
+            "8": [
+                {
+                    "type": "item",
+                    "id": 16
+                },
+                {
+                    "type": "item",
+                    "id": 17
+                }
+            ],
+            "9": [
+                {
+                    "type": "item",
+                    "id": 18
+                },
+                {
+                    "type": "group",
+                    "type_name": "group",
+                    "label": "Group",
+                    "id": 14,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "id": 20
+                            },
+                            {
+                                "type": "item",
+                                "id": 19
+                            }
+                        ]
+                    ]
+                }
+            ],
+            "10": [
+                {
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 5,
+                    "columns": [
+                        [
+                            {
+                                "type": "group",
+                                "type_name": "group",
+                                "label": "Group",
+                                "id": 15,
+                                "columns": [
+                                    [
+                                        {
+                                            "type": "item",
+                                            "id": 28
+                                        },
+                                        {
+                                            "type": "container",
+                                            "type_name": "grid3",
+                                            "label": "Grid 3 columns",
+                                            "id": 3,
+                                            "columns": [
+                                                [
+                                                    {
+                                                        "type": "item",
+                                                        "id": 25
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 30
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 33
+                                                    }
+                                                ],
+                                                [
+                                                    {
+                                                        "type": "item",
+                                                        "id": 26
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 31
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 34
+                                                    }
+                                                ],
+                                                [
+                                                    {
+                                                        "type": "item",
+                                                        "id": 27
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 32
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 35
+                                                    }
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "id": 29
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "item",
+                    "id": 23
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 6,
+                    "columns": [
+                        [
+                            {
+                                "type": "group",
+                                "type_name": "group",
+                                "label": "Group",
+                                "id": 16,
+                                "columns": [
+                                    [
+                                        {
+                                            "type": "item",
+                                            "id": 36
+                                        },
+                                        {
+                                            "type": "container",
+                                            "type_name": "grid3",
+                                            "label": "Grid 3 columns",
+                                            "id": 4,
+                                            "columns": [
+                                                [
+                                                    {
+                                                        "type": "item",
+                                                        "id": 38
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 41
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 44
+                                                    }
+                                                ],
+                                                [
+                                                    {
+                                                        "type": "item",
+                                                        "id": 39
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 42
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 45
+                                                    }
+                                                ],
+                                                [
+                                                    {
+                                                        "type": "item",
+                                                        "id": 40
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 43
+                                                    },
+                                                    {
+                                                        "type": "item",
+                                                        "id": 46
+                                                    }
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "id": 37
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "item",
+                    "id": 24
+                }
+            ],
+            "11": [
+                {
+                    "type": "item",
+                    "id": 47
+                },
+                {
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 7,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "id": 48
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "id": 54
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "type": "group",
+                    "type_name": "group",
+                    "label": "Group",
+                    "id": 18,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "id": 62
+                            },
+                            {
+                                "type": "item",
+                                "id": 63
+                            }
+                        ]
+                    ]
+                }
+            ],
+            "12": [
+                {
+                    "type": "item",
+                    "id": 57
+                },
+                {
+                    "type": "item",
+                    "id": 61
+                },
+                {
+                    "type": "item",
+                    "id": 64
+                },
+                {
+                    "type": "item",
+                    "id": 69
+                }
+            ]
+        }
+    },
+    "footer": {
+        "license": "<p style=\"text-align: center;\">\u200b<img src=\"https:\/\/licensebuttons.net\/l\/by-nc\/4.0\/88x31.png\"\/><\/p><!--StartFragment--><p><span style=\"color: rgba(0, 0, 0, 0.87);font-size: 14px;float: none;\">This work is licensed under a\u00a0<\/span><a href=\"https:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/\" target=\"_blank\" style=\"font-size: 14px;\">Creative Creative Commons Attribution-NonCommercial 4.0 International License<\/a><\/p>",
+        "license_position": "center"
+    },
+    "variables": {
+        "open_tag": "{",
+        "close_tag": "}",
+        "variables_list": [
+            {
+                "key": "size1",
+                "default_value": "2200000"
+            },
+            {
+                "key": "test",
+                "default_value": "4"
+            },
+            {
+                "key": "k",
+                "default_value": "2"
+            },
+            {
+                "key": "t",
+                "default_value": "2"
+            },
+            {
+                "key": "k_value",
+                "default_value": "2"
+            },
+            {
+                "key": "prova",
+                "default_value": "1"
+            }
+        ]
+    }
+}

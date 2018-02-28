@@ -1,0 +1,65 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "skin_hairiness",
+				"header": "Skin hairiness",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "skin_hairiness": [
+				{
+					"type": "text",
+					"label": "Peach",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "17"
+				}
+			]
+		},
+		{
+		    "skin_hairiness": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "3"
+				}
+			]
+		}
+	]
+}

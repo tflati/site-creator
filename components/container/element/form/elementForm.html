@@ -1,0 +1,84 @@
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Form: {{myElement.label}}</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteForm()">	
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showForm()">
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>
+	
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Label</label>
+		<input ng-model="myElement.label" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Key</label>
+		<input ng-model="myElement.key" style="color:black;">
+	</md-input-container>
+	
+	<md-input-container class="md-block">
+		<label>Description</label><br>
+		<div text-angular ng-model="myElement.description" style="border:solid; border-color:#ccc;"></div>
+	</md-input-container>
+	
+	<b>Fields</b><br><br>
+	<div ng-repeat="field in myElement.fields">
+		<div ng-switch="field.type">
+			<div ng-switch-when="text">
+				<my-text-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the text field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-text-field>
+			</div>
+			<div ng-switch-when="number">
+				<my-number-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the number field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-number-field>
+			</div>
+			<div ng-switch-when="email">
+				<my-email-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the email field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-email-field>
+			</div>
+			<div ng-switch-when="password">
+				<my-password-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the password field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-password-field>
+			</div>
+			<div ng-switch-when="date">
+				<my-date-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the date field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-date-field>
+			</div>
+			<div ng-switch-when="checkbox">
+				<my-checkbox-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the checkbox field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-checkbox-field>
+			</div>
+			<div ng-switch-when="select">
+				<my-select-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the select field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-select-field>
+			</div>
+			<div ng-switch-when="radio">
+				<my-radio-button-field my-field="field" action="showDeleteFieldDialog('Are you sure to delete the radio button field ' + field.label + '?',myElement.fields,$index)" action2="moveFieldDialog('up',myElement.fields,$index)" action3="moveFieldDialog('down',myElement.fields,$index)"></my-radio-button-field>
+			</div>
+		</div>
+	</div>
+
+	<div align="right">
+		<md-button class="md-raised md-primary" ng-click="showAddFieldDialog($event)">Add Field</md-button>
+	</div>
+	
+	<div layout-gt-sm="row">
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Submit label</label>
+			<input ng-model="myElement.submit.label" style="color:black;">
+		</md-input-container>
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Submit url</label>
+			<input ng-model="myElement.submit.url" style="color:black;">
+		</md-input-container>
+	</div>
+	<div ng-show="new_variables.length > 0">
+		<font color="#F44336">New variables detect!</font><br>
+		Click on chips for add the variable
+		<md-chips ng-model="new_variables" readonly="true" md-transform-chip="" md-removable="false">
+			<md-chip-template>
+				<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+			</md-chip-template>
+		</md-chips>
+	</div>
+	
+</md-content>
+<br>

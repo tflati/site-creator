@@ -1,0 +1,75 @@
+<style>
+md-input-container:not(.md-input-has-value) input:not(:focus), md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {
+    color: rgba(0,0,0,0.87) !important;
+}
+
+</style>
+
+<br>
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Item: {{myItem.title}}</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveUpItem()">	
+			<ng-md-icon icon="arrow_upwards" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveDownItem()">	
+			<ng-md-icon icon="arrow_downward" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteItem()">	
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showSelectItem()">	
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>
+	
+	<md-switch ng-model="myItem.use_image">
+		Use image?
+	</md-switch>
+
+	<!--image-->
+	
+	<div layout-gt-sm="row" ng-if="myItem.use_image">
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Image source</label>
+			<input ng-model="myItem.image" style="color: black">
+			<div ng-show="new_variables.length > 0">
+				
+				<font color="#F44336">New variables detect!</font><br>
+				Click on chips for add the variable
+				<md-chips ng-model="new_variables" readonly="true" md-transform-chip="" md-removable="false">
+					<md-chip-template>
+						<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+					</md-chip-template>
+				</md-chips>
+			</div>
+		</md-input-container>
+		<md-button class="md-icon-button md-accent" aria-label="Upload" ngf-select="uploadObj($file, $invalidFiles)"
+			accept="image/*" ngf-max-size="10MB">
+			<ng-md-icon icon="file_upload" style="fill: #E91E63" size="20"></ng-md-icon> 
+		</md-button>
+	</div>
+	<md-progress-linear md-mode="determinate" value="{{f.progress}}" ng-show="f.progress >= 0 && f.progress <= 99"></md-progress-linear>
+	<div style="font:smaller">{{errFile.name}} <font color="red">{{errFile.$error}} {{errFile.$errorParam}}</font></div>     
+
+	<!--Icon font awesome -->	
+	<my-fa-icon-picker my-item="myItem" ></my-fa-icon-picker>
+		
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Title</label>
+		<input ng-model="myItem.title" style="color:black;">
+	</md-input-container>
+	
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Subtitle</label>
+		<input ng-model="myItem.subtitle" style="color:black;">
+	</md-input-container>
+	
+	<md-input-container class="md-block">
+		<label>Text</label><br><br>
+		<div text-angular ng-model="myItem.text" style="border:solid; border-color:#ccc;"></div>
+	</md-input-container>
+</md-content>

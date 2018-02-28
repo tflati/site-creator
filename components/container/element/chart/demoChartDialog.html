@@ -1,0 +1,52 @@
+<md-dialog>
+	<form ng-cloak>
+		<md-toolbar>
+		  <div class="md-toolbar-tools">
+			<h2>Example</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<ng-md-icon icon="close" style="fill: white"></ng-md-icon> 
+			</md-button>
+		  </div>
+		</md-toolbar>
+
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<div ng-switch="locals.chart_type">
+					<div ng-switch-when="bar_chart">
+						<center><h2>Bar Chart</h2></center>
+						<img style="max-width: 100%;" src="css/img/bar_chart_example.png" >
+					</div>
+					<div ng-switch-when="doughnut_chart">
+						<center><h2>Doughnut Chart</h2></center>
+						<img style="margin: auto; max-width: 100%;" src="css/img/doughnut_chart_example.png">
+					</div>
+					<div ng-switch-when="horizontal_bar_chart">
+						<center><h2>Horizontal Chart</h2></center>
+						<img style="margin: auto; max-width: 100%;" src="css/img/horizontal_bar_chart_example.png">
+					</div>
+					<div ng-switch-when="line_chart">
+						<center><h2>Line Chart</h2></center>
+						<img style="margin: auto; max-width: 100%;" src="css/img/line_chart_example.png">
+					</div>
+					<div ng-switch-when="pie_chart">
+						<center><h2>Pie Chart</h2></center>
+						<img style="margin: auto; max-width: 100%;" src="css/img/pie_chart_example.png">
+					</div>
+					<div ng-switch-when="polar_area_chart">
+						<center><h2>Polar Area Chart</h2></center>
+						<img style="margin: auto; max-width: 100%;" src="css/img/polar_area_chart_example.png">
+					</div>
+					<div ng-switch-when="radar_chart">
+						<center><h2>Radar Chart</h2></center>
+						<img style="margin: auto; max-width: 100%;" src="css/img/radar_chart_example.png">
+					</div>
+					<!--<div ng-switch-default> 
+						<center><h2>Reactive Chart</h2></center>
+						<img style="margin: auto; max-width: 100%;" src="css/img/reactive_chart_example.png">
+					</div>-->
+				</div>
+			</div>
+		</md-dialog-content>
+	</form>
+</md-dialog>

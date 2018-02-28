@@ -1,0 +1,210 @@
+<style>
+md-input-container:not(.md-input-has-value) input:not(:focus), md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {
+    color: rgba(0,0,0,0.87) !important;
+}
+
+</style>
+
+<br>
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Button</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveUpItem()">	
+			<ng-md-icon icon="arrow_upwards" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveDownItem()">	
+			<ng-md-icon icon="arrow_downward" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteItem()">	
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showSelectItem()">	
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>
+	
+	<div>
+		<b>Define button:</b><br><br>
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Button color</label>
+			<md-select name="type" ng-model="myItem.color">
+				<md-option value="">--</md-option>
+				<md-option value="#9E9E9E"><font color="#9E9E9E">Grey</font></md-option>
+				<md-option value="black"><font color="black">Black</font></md-option>
+				<md-option value="gold"><font color="gold">Yellow</font></md-option>
+				<md-option value="orange"><font color="orange">Orange</font></md-option>
+				<md-option value="red"><font color="red">Red</font></md-option>
+				<md-option value="hotpink"><font color="hotpink">Pink</font></md-option>
+				<md-option value="#3F51B5"><font color="#3F51B5">Blue</font></md-option>
+				<md-option value="#4CAF50"><font color="#4CAF50">Green</font></md-option>
+				<md-option value="#009688"><font color="#009688">Dark green</font></md-option>
+			</md-select>		
+		</md-input-container>
+			
+		<md-input-container class="md-block" flex-gt-sm>
+			<label>Tooltip</label>
+			<input ng-model="myItem.title"  style="color:black;">
+		</md-input-container>
+		
+		<md-switch ng-model="myItem.disabled">
+			Disabled?
+		</md-switch>
+		<br><br>
+		
+	</div>
+	
+	<div>
+	<b>What you want to display on the button?</b>
+	<md-input-container class="md-block" flex-gt-sm>
+		<md-select name="type" ng-model="button_component" ng-change="changeComponent();">
+			<md-option value="text">Just text</md-option>
+			<md-option value="icon">Icon + Text</md-option>
+			<md-option value="image">Image + Text</md-option>
+		</md-select>		
+	</md-input-container>
+	</div>
+	
+	<div ng-repeat="item in myItem.items">
+		<div ng-switch="item.type">	
+			<div ng-switch-when="image">
+				Define image:<br><br>
+				
+				<div layout-gt-sm="row">
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Image source</label>
+					<input ng-model="item.img_src" style="color: black">
+					<div ng-show="new_variables.length > 0">
+						
+						<font color="#F44336">New variables detect!</font><br>
+						Click on chips for add the variable
+						<md-chips ng-model="new_variables" readonly="true" md-transform-chip="" md-removable="false">
+							<md-chip-template>
+								<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+							</md-chip-template>
+						</md-chips>
+					</div>
+				</md-input-container>
+				<md-button class="md-icon-button md-accent" aria-label="Upload" ngf-select="uploadObj($file, $invalidFiles)"
+					accept="image/*" ngf-max-size="10MB">
+					<ng-md-icon icon="file_upload" style="fill: #E91E63" size="20"></ng-md-icon> 
+				</md-button>
+				</div>
+				
+				<md-progress-linear md-mode="determinate" value="{{f.progress}}" ng-show="f.progress >= 0 && f.progress <= 99"></md-progress-linear>
+				<div style="font:smaller">{{errFile.name}} <font color="red">{{errFile.$error}} {{errFile.$errorParam}}</font></div>    
+				
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Image height</label>
+					<input type="number" step="1" ng-model="item.height" min="1" max="100"/>
+				</md-input-container>
+				
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Image width</label>
+					<input type="number" step="1" ng-model="item.width" min="1" max="100"/>
+				</md-input-container>
+			</div>
+			
+			<div ng-switch-when="icon">
+				Define icon:<br><br>
+				<my-fa-icon-picker my-item="item" ></my-fa-icon-picker>
+			</div>
+			
+			<div ng-switch-when="text">
+				Define text:<br><br>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Text</label>
+					<input ng-model="item.label"  style="color:black;">
+				</md-input-container>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Text color</label>
+					<md-select name="type" ng-model="item.color">
+						<md-option value="black">Black</md-option>
+						<md-option value="white">White</md-option>
+					</md-select>		
+				</md-input-container>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	
+	<div>
+	<b>Choose action:</b><br><br>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Action</label>
+		<md-select name="type" ng-model="myItem.action.action_type">
+			<md-option value="">--</md-option>
+			<md-option value="download">Dowload</md-option>
+			<md-option value="link">Link</md-option>
+			<md-option value="write">Write</md-option>
+		</md-select>
+	</md-input>
+	<br>
+	</div>
+	<div ng-switch="myItem.action.action_type">
+		<div ng-switch-when="download">
+			<i>Action download:</i><br><br>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Action source</label>
+				<input ng-model="myItem.action.action_url"  style="color:black;">
+			</md-input-container>
+		</div>
+		<div ng-switch-when="link">
+			<i>Action link:</i><br>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Url</label>
+				<input ng-model="myItem.action.action_url"  style="color:black;">
+			</md-input-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Target</label>
+				<md-select name="type" ng-model="myItem.action.action_target">
+					<md-option value="_blank">Blank</md-option>
+					<md-option value="_self">Self</md-option>
+					<md-option value="_parent">Parent</md-option>
+					<md-option value="_top">Top</md-option>
+				
+				</md-select>
+			</md-input>
+		</div>
+		<div ng-switch-when="write">
+			<i>Action write:</i><br>
+			<md-input-container class="md-block">
+				<label>Choose a variable</label>
+				<md-select ng-model="action_variables" md-on-close="updateActionVariables(action_variables);" multiple>
+					<md-option></md-option>
+					<md-option ng-repeat="variable in variables_list" ng-value="variable.key" >
+					  {{variable.key}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+			
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Add new variable</label>
+				<input ng-model="new_var"  style="color:black;">
+			
+				<div ng-show="new_variables2.length > 0">
+					&nbsp;<br>
+					<font color="#F44336">New variables detect!</font><br>
+					Click on chips for add the variable
+					<md-chips ng-model="new_variables2" readonly="true" md-transform-chip="" md-removable="false">
+						<md-chip-template>
+							<a href ng-click="addVariable($chip.name)" class="primary">{{$chip.name}}</a>
+						</md-chip-template>
+					</md-chips>
+				</div>
+			</md-input-container>
+			
+			<i>Variables list:</i><br><br>
+			<div ng-repeat="variable in myItem.action.action_variables">
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>{{variable.key}}</label>
+					<input ng-model="variable.value"  style="color:black;">
+				</md-input-container>
+			</div>
+		</div>
+	</div>
+	
+	
+</md-content>

@@ -1,0 +1,55 @@
+<style>
+md-input-container:not(.md-input-has-value) input:not(:focus), md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field, md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {
+    color: rgba(0,0,0,0.87) !important;
+}
+
+</style>
+
+<!--Icon font awesome -->
+<md-input-container  ng-if="!myItem.use_image" class="md-block" flex-gt-sm style="color:black !important;">
+	<md-autocomplete flex 
+		ng-disabled = "isDisabled"
+		md-no-cache = "false"
+		md-selected-item = "selectedItem"
+		md-search-text = "searchText"
+		md-selected-item-change = "selectedItemChange(item)"
+		md-items = "item in querySearch(searchText)"
+		md-item-text = "item.name"
+		md-min-length = "0"
+		placeholder = "Chose icon" style="color:black !important;" >
+	  
+		<md-item-template>
+			<i class="fa {{item.name}}"></i>&nbsp;&nbsp;{{item.name}}
+		</md-item-template>
+	  
+		<md-not-found>
+			No matching for "{{searchText}}" were found.
+		</md-not-found>
+	</md-autocomplete>
+</md-input-container>
+
+<md-input-container  ng-if="!myItem.use_image" class="md-block" flex-gt-sm>
+		<label>Icon color</label>
+		<md-select name="type" ng-model="myItem.icon_color">
+			<md-option value="white"><font color="black">White</font></md-option>
+			<md-option value="black"><font color="black">Black</font></md-option>
+			<md-option value="gold"><font color="gold">Yellow</font></md-option>
+			<md-option value="orange"><font color="orange">Orange</font></md-option>
+			<md-option value="red"><font color="red">Red</font></md-option>
+			<md-option value="hotpink"><font color="hotpink">Pink</font></md-option>
+			<md-option value="blue"><font color="blue">Blue</font></md-option>
+			<md-option value="green"><font color="green">Green</font></md-option>
+			<md-option value="darkgreen"><font color="darkgreen">Dark green</font></md-option>
+		</md-select>		
+</md-input-container>
+
+<md-input-container  ng-if="!myItem.use_image" class="md-block" flex-gt-sm>
+		<label>Icon dimension</label>
+		<md-select name="type" ng-model="myItem.icon_dim">
+			<md-option value="fa-lg">1x</md-option>
+			<md-option value="fa-2x">2x</md-option>
+			<md-option value="fa-3x">3x</md-option>
+			<md-option value="fa-4x">4x</md-option>
+			<md-option value="fa-5x">5x</md-option>
+		</md-select>		
+</md-input-container>

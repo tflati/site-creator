@@ -1,0 +1,52 @@
+<br>
+<div ng-if="active_page_obj.show_header != 'hidden'">
+	<div ng-switch="info.header.type">
+	
+		<div ng-switch-when="normal">
+			<md-card md-theme-watch>
+				<md-card-title>
+					<md-card-title-media>
+						<div class="md-media-lg card-media" ng-if="active_page_obj.show_header != 'small'">
+							<img ng-src="{{uploadResource(info.header.image.src)}}" class="md-card-image;" >
+						</div>
+						<div class="md-media-md card-media" ng-if="active_page_obj.show_header == 'small'">
+							<img ng-src="{{uploadResource(info.header.image.src)}}" class="md-card-image;" >
+						</div>
+					</md-card-title-media>
+					<div>&nbsp;&nbsp;&nbsp;</div>
+					<md-card-title-text>
+						<span class="md-headline" ng-bind="info.header.title" style="color:black; font-size: 2.5em;"></span>
+						<span class="md-subhead" ng-bind-html="info.header.description" style="color:black;"></span>
+					</md-card-title-text>
+				</md-card-title>
+				<md-card-content ng-if="active_page_obj.show_long_description != false">
+					<span align="justify" ng-bind-html="info.header.long_description"></span>
+				</md-card-content>
+				<md-card-footer  ng-if="active_page_obj.show_logos != false" layout="row" class="md-padding">
+					<img class="header-logo" ng-repeat="logo in info.header.logos" ng-src="{{uploadResource(logo.image)}}">
+				</md-card-footer>
+			</md-card>
+		</div>
+		
+		<div ng-switch-when="widescreen">
+			<md-content layout-xs="column" layout="row">
+				<md-card>
+					<!--normal image with title -->
+					<img ng-src="{{uploadResource(info.header.image.src)}}" class="md-card-image;" ng-if="active_page_obj.show_header != 'small'">
+					<img ng-src="{{uploadResource(info.header.image.src_small)}}" class="md-card-image;" ng-if="active_page_obj.show_header == 'small'">
+					<span class="span_title" ng-bind="info.header.title" style="color:{{info.header.title_color}};"></span>
+					<span class="span_subtitle" ng-if="active_page_obj.show_header != 'small'" ng-bind-html="info.header.description" style="color:{{info.header.title_color}};"></span>
+					<md-card-content ng-if="active_page_obj.show_long_description != false">
+						<span align="justify" ng-bind-html="info.header.long_description"></span>
+					</md-card-content>
+					<md-card-footer  ng-if="active_page_obj.show_logos != false" layout="row" class="md-padding">
+						<img class="header-logo" ng-repeat="logo in info.header.logos" ng-src="{{uploadResource(logo.image)}}">
+					</md-card-footer>
+				</md-card>
+			</md-content>
+		</div>
+		
+	</div>
+</div>
+<br><br>
+

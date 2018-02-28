@@ -1,0 +1,51 @@
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Number: {{myField.label}}</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveUpField()">	
+			<ng-md-icon icon="arrow_upwards" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="moveDownField()">	
+			<ng-md-icon icon="arrow_downward" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteField()">	
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showNumberField()">	
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Label</label>
+		<input ng-model="myField.label" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Key</label>
+		<input ng-model="myField.key" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Hint</label>
+		<input ng-model="myField.hint" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Default value</label>
+		<input ng-model="myField.default_value" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Minimun value</label>
+		<input type="number" ng-model="myField.min_value" step="1" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Maximum value</label>
+		<input type="number" ng-model="myField.max_value" step="1" style="color:black;">
+	</md-input-container>
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Step dimension</label>
+		<input type="number" ng-model="myField.step_dimension" step="1" style="color:black;">
+	</md-input-container>
+	<md-switch ng-model="myField.required">
+		Required?
+	</md-switch>
+</md-content>

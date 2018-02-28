@@ -1,0 +1,44 @@
+<style>
+md-card-content {
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+</style>
+<md-card-title ng-if="myElement.label">
+	<md-card-title-text>
+		<span class="md-headline">{{myElement.label}}</span>
+	</md-card-title-text>
+</md-card-title>
+<md-card-content>
+	<span ng-if="myElement.description" align="justify" class="md-padding" ng-bind-html="myElement.description"></span>
+		<div ng-switch="myElement.chart_type">
+			<div ng-switch-when="doughnut_chart">
+				<canvas id="doughnut" class="chart chart-doughnut"
+					chart-data="data" chart-labels="labels" chart-options="options" style="display: block; height: {{myElement.height}}; width: {{myElement.width}};">
+				</canvas> 
+			</div>
+			<div ng-switch-when="pie_chart">
+				<canvas id="pie" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-options="options" style="display: block;  max-height: {{myElement.height}} !important;  max-width: {{myElement.width}}"></canvas> 			
+			</div>
+			<div ng-switch-when="polar_area_chart">
+				<canvas id="polar-area" class="chart chart-polar-area" chart-data="data" chart-labels="labels" chart-options="options" style="display: block; height: {{myElement.height}}; width: {{myElement.width}};"></canvas> 
+			</div>
+			<div ng-switch-when="radar_chart">
+				<canvas id="radar" class="chart chart-radar"
+					chart-data="data" chart-series="series" chart-labels="labels" chart-options="options" style="display: block; height: {{myElement.height}}; width: {{myElement.width}};"></canvas> 
+			</div>
+			<div ng-switch-when="bar_chart">
+				<canvas id="bar" class="chart chart-bar"
+					chart-data="data" chart-series="series" chart-labels="labels" chart-options="options" style="display: block; height: {{myElement.height}}; width: {{myElement.width}};"></canvas>
+			</div>
+			<div ng-switch-when="horizontal_bar_chart">
+				<canvas id="base" chart-series="series" class="chart-horizontal-bar" chart-data="data" chart-labels="labels" chart-options="options" style="display: block; height: {{myElement.height}}; width: {{myElement.width}};"></canvas> 
+			</div>
+			<div ng-switch-when="line_chart">
+				<canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride"  style="display: block; height: {{myElement.height}}; width: {{myElement.width}};"></canvas>
+			</div>
+		</div>
+	<font color="red">{{error}}</font>
+</md-card-content>
+

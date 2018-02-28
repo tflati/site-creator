@@ -1,0 +1,43 @@
+<style>
+md-list.md-demo-theme md-list-item.md-2-line .md-list-item-text p, md-list.md-demo-theme md-list-item.md-3-line .md-list-item-text p {
+    color: black;
+}
+
+md-list-item.md-3-line, md-list-item.md-3-line > .md-no-style {
+    height: auto;
+    min-height: 25px;
+}
+</style>
+
+
+<md-card-title ng-if="myElement.label">
+	<md-card-title-text>
+		<span class="md-headline">{{myElement.label}}</span>
+	</md-card-title-text>
+</md-card-title>
+<md-card-content >
+	<span ng-if="myElement.description" align="justify" class="md-padding" ng-bind-html="myElement.description"></span>
+
+	<md-list flex>
+		<div ng-repeat="item in element_list">
+			<md-list-item class="md-3-line" ng-if="item.use_image">
+				<img ng-src="{{uploadResource(item.image)}}" class="md-avatar" />
+				<div class="md-list-item-text" layout="column">
+					<h3>{{item.title}}</h3>
+					<h4>{{item.subtitle}}</h4>
+					<p ng-bind-html="item.text"></p>
+				</div>
+			</md-list-item>
+			<md-list-item class="md-3-line" ng-if="!item.use_image" style="color: black !important;">
+				<div layout="row" layout-align="top top">
+					<i class="fa {{item.icon}} {{item.icon_dim}}" style="padding-right: 0.5cm; color:{{item.icon_color}}"></i>
+					<div class="md-list-item-text" layout="column">
+						<h3><b>{{item.title}}</b></h3>
+						<h4>{{item.subtitle}}</h4>
+						<p ng-bind-html="item.text"></p>
+					</div>
+				</div>
+			</md-list-item>
+		</div>
+	</md_list>
+</md-card-content>

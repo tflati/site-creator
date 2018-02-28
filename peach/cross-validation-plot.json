@@ -1,0 +1,181 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "k",
+				"header": "K",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "CV-error",
+				"header": "CV-error",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"information":{
+		"x_axes" : {
+			"label" : "K"
+		},
+		"y_axes" : {
+			"label" : "CV-error"
+		}
+	},
+	"total": "4",
+	"hits": [
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "1",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.66001"
+				}
+			]
+		},
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "2",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.39815"
+				}
+			]
+		},
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "3",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.36751"
+				}
+			]
+		},
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "4",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.35608"
+				}
+			]
+		},
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "5",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.35896"
+				}
+			]
+		},
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "6",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.35806"
+				}
+			]
+		},
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "7",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.36042"
+				}
+			]
+		},
+		{
+		    "k": [
+				{
+					"type": "text",
+					"label": "8",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"CV-error": [
+				{
+					"type": "number",
+					"value": "0.36058"
+				}
+			]
+		}
+	]
+}

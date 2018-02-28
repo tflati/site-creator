@@ -1,0 +1,17 @@
+{
+  "name": "Tesi Francesco Maggi",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Francesco Maggi"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

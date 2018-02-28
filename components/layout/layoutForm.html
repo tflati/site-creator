@@ -1,0 +1,128 @@
+<md-toolbar class="md-accent">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Layout</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showLayout()">
+			<ng-md-icon ng-show="option_visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="option_visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="layout_visibility" class="md-whiteframe-4dp myform" flex layout-padding>	
+
+<div class="truncatedemoBasicUsage">
+	<div id="layout-form" class="nestedDemo">
+		
+			<div class="app-body">
+				
+				<!-- Markup for lists inside the dropzone. It's inside a seperate template
+					because it will be used recursively. The dnd-list directive enables
+					to drop elements into the referenced array. The dnd-draggable directive
+					makes an element draggable and will transfer the object that was
+					assigned to it. If an element was dragged away, you have to remove
+					it from the original list yourself using the dnd-moved attribute -->
+				<script type="text/ng-template" id="list.html">
+					<ul dnd-list="list">
+						<li ng-repeat="item in list"
+							dnd-draggable="item"
+							dnd-effect-allowed="move"
+							dnd-moved="list.splice($index, 1)"
+							dnd-selected="active_file.layout.selected = item"
+							ng-class="{selected: active_file.layout.selected === item}"
+							ng-include="item.type + '.html'">
+						</li>
+					</ul>
+				</script>
+
+				<!-- This template is responsible for rendering a container element. It uses
+					 the above list template to render each container column -->
+				<script type="text/ng-template" id="container.html">					
+					<div class="container-element1 box box-blue">
+						<h3>
+							{{item.label}}
+							<md-button class="md-icon-button" aria-label="Favorite" ng-click="showGridDeleteDialog('Are you sure to delete the grid?',item, list,$index)">	
+								<ng-md-icon icon="delete" style="fill: #31708f"></ng-md-icon> 
+							</md-button>
+						</h3>
+						<div ng-switch="item.type_name">
+							<div ng-switch-when="grid1">
+								<div class="column1" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
+							</div>
+							<div ng-switch-when="grid2">
+								<div class="column2" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
+							</div>
+							<div ng-switch-when="grid3">
+								<div class="column3" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
+							</div>
+							<div ng-switch-when="grid4">
+								<div class="column4" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
+							</div>
+							<div ng-switch-when="grid5">
+								<div class="column5" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
+							</div>
+							<div ng-switch-when="grid6">
+								<div class="column6" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>	
+				</script>
+				
+				<!-- This template is responsible for rendering a group element. It uses
+					 the above list template to render each container column -->
+				<script type="text/ng-template" id="group.html">					
+					<div class="container-element1 box box-pink">
+						<h3>
+							{{item.label}}
+							<md-button class="md-icon-button" aria-label="Favorite" ng-click="showGridDeleteDialog('Are you sure to delete the group?',item, list,$index)">	
+								<ng-md-icon icon="delete" style="fill: #d84fa7"></ng-md-icon> 
+							</md-button>
+						</h3>
+						<div class="column1" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
+						<div class="clearfix"></div>
+					</div>	
+				</script>
+
+				<!-- Template for a normal list item -->
+				<script type="text/ng-template" id="item.html">
+					<div class="item">{{getElementName(item.id)}}</div>
+				</script>
+
+				<!-- Main area with dropzones and source code -->
+				<div class="col-md-10">
+					<div class="row">
+						<div ng-repeat="(zone, list) in active_file.layout.dropzones" class="col-md-6">
+							<div class="dropzone box box-yellow">
+								<!-- The dropzone also uses the list template -->
+								<h3>{{getContainerName(zone)}}</h3> <!-- zone is the container id -->
+								<div ng-include="'list.html'"></div>
+							</div>
+						</div>
+					</div>
+					<div view-source="nested"></div>
+				</div>
+			</div>
+
+			<div class="rightbar">
+				<div class="toolbox box box-grey box-padding">
+					<h3>New Grid</h3>
+					<center>
+					<ul>
+						<!-- The toolbox only allows to copy objects, not move it. After a new
+							 element was created, dnd-copied is invoked and we generate the next id -->
+						<li ng-repeat="item in active_file.layout.templates"
+							dnd-draggable="item"
+							dnd-effect-allowed="copy"
+							dnd-copied="item.id = item.id + 1"
+							>
+						<button type="button" class="btn"><b>{{item.label}}</b></button>
+						</li>
+					</ul>
+					</center>
+				</div>
+			</div>
+			
+		
+	</div>
+</div>
+</md-content>
+<br>

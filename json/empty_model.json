@@ -1,0 +1,44 @@
+{
+	"header": {
+		"type": "normal",
+		"title": "",
+		"title_color": "white",
+		"description": "",
+		"long_description": "",
+		"image": {
+			"src": "",
+			"src_small": ""
+		},
+		"logos": []
+	},
+	"menu" : {
+		"type" : "menu_bar",
+		"elements" : []
+	},
+	"containers" : {
+		"home" : "",
+		"c_list" :[]
+	},
+	"layout" :	{
+		"selected": null,
+        "templates": [
+            {"type": "container", "type_name": "grid1",  "label": "Grid 1 column", "id": 1, "column": [[]]},
+            {"type": "container", "type_name": "grid2",  "label": "Grid 2 columns", "id": 2, "columns": [[], []]},
+            {"type": "container", "type_name": "grid3",  "label": "Grid 3 columns", "id": 3, "columns": [[], [], []]},
+            {"type": "container", "type_name": "grid4",  "label": "Grid 4 columns", "id": 4, "columns": [[], [], [], []]},
+            {"type": "container", "type_name": "grid5",  "label": "Grid 5 columns", "id": 5, "columns": [[], [], [], [], []]},
+            {"type": "container", "type_name": "grid6",  "label": "Grid 6 columns", "id": 6, "columns": [[], [], [], [], [], []]},
+			{"type": "group", "type_name": "group",  "label": "Group", "id": 7, "columns": [[]]}
+        ],
+		"dropzones" : {}
+	},
+	"footer": {
+		"license" : "",
+		"license_position" : ""
+	},
+	 "variables": {
+        "open_tag": "{",
+        "close_tag": "}",
+        "variables_list": []
+    }
+}

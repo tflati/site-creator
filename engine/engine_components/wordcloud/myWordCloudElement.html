@@ -1,0 +1,30 @@
+<!--<md-content layout-xs="column" layout="row" flex style="width:100% !important;">
+	<md-card>-->
+		<md-card-title>
+			<md-card-title-text>
+				<span class="md-headline">{{myElement.label}}</span>
+			</md-card-title-text>
+        </md-card-title>
+		<md-card-content style="width:100%;">
+			<span align="justify" class="md-padding" ng-bind-html="myElement.description"></span>
+			<center>
+			<jqcloud 
+				words="words" 
+				steps="7" 
+				colors=""
+				shape="{{myElement.shape}}" 
+				width="{{myElement.width}}" 
+				height= "{{myElement.height}}" 
+				auto-resize="true" 
+				style="max-width:100%;"
+				>
+			</jqcloud>
+			</center>
+			<br><br>
+			<font color="red">{{error}}</font>
+			{{colors}}
+		</md-card-content>
+<!--</md-card>
+</md-content>-->
+
+ 

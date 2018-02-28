@@ -1,0 +1,27 @@
+<md-toolbar class="md-accent">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>Footer</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showFooter()">
+			<ng-md-icon ng-show="footer_visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="footer_visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="footer_visibility" class="md-whiteframe-4dp myform" flex layout-padding>	
+	
+	<md-input-container class="md-block">
+		<label>License</label><br>
+		<div text-angular ng-model="active_file.footer.license" style="border:solid; border-color:#ccc;"></div>
+	</md-input-container>
+	
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Position</label>
+		<md-select name="type" ng-model="active_file.footer.license_position">
+			<md-option value="left">Left</md-option>
+			<md-option value="center">Center</md-option>
+			<md-option value="right">Right</md-option>
+		</md-select>
+	</md-input-container>
+	
+</md-content>
+<br>

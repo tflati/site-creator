@@ -1,0 +1,2766 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "name",
+				"header": "Accession name",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "sra_id",
+				"header": "SRA ID",
+				"tooltip": "Link to the SRA repository",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "biosample_id",
+				"header": "BioSample ID",
+				"tooltip": "Link to the BioSample",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "bioproject_id",
+				"header": "BioProject ID",
+				"tooltip": "Link to the BioProject associated with this accession",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "nation",
+				"header": "Origin",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "skin_h",
+				"header": "Skin hairiness",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "fruit_shape",
+				"header": "Fruit shape",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "fruit_flesh_color",
+				"header": "Fruit flesh color",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "flesh_adhesion",
+				"header": "Flesh adhesion",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "flesh_firmness",
+				"header": "Flesh firmness",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "flesh_taste",
+				"header": "Flesh taste",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "flower_type",
+				"header": "Flower type",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			},
+			{
+				"label": "flower_shape",
+				"header": "Flower shape",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				}
+			}
+		]
+	},
+	"total": "740",
+	"hits": [
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Bai Gen Gan Su Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830513",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830513",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048722",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048722",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197469",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197469",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Gansu, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Clingstone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Bai Hua Shan Bi Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830517",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830517",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048732",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048732",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197473",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197473",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Beijing, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Double",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Bai Hua Shan Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830511",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830511",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048726",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048726",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197467",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197467",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "CI. P1908",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR502982",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR502982",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN01000695",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN01000695",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA312014",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA312014",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Wild, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Guang He Tao A Ba",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830500",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830500",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048715",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048715",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197463",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197463",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Sichuan, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Clingstone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Guang He Tao Ri Ka Ze",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830516",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830516",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048731",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048731",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197472",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197472",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Tibet, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Clingstone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "GZ-1",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR3237746",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR3237746",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN04492156",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN04492156",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA312014",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA312014",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Hong Gen Gan Su Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830499",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830499",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048714",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048714",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197462",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197462",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Gansu, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Hong Hua Shan Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830501",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830501",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048716",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048716",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197464",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197464",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Liaoning, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Hong Round Guang He Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830515",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830515",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048730",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048730",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197471",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197471",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Tibet, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Clingstone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Ka Shi 1",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830518",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830518",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048733",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048733",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197474",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197474",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Xinjiang, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Nonpareil",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR1994365",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR1994365",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN03566825",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN03566825",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA281983",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA281983",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Wild, USA",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+				{
+				"name": [
+					{
+						"type": "text",
+						"label": "Prunus ferganensis",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR502999",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR502999",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN01000694",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN01000694",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197462",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA34817",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Prunus kansuensis",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR502984",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR502984",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN01000696",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN01000696",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA312014",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA312014",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Shan Gan Shan Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830503",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830503",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048718",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048718",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197466",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197466",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Shanxi, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Tian Ren Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830502",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830502",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048717",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048717",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197465",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197465",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Gansu, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Xin Jiang Pan Tao 1",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830519",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830519",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048734",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048734",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197475",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197475",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Gansu, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Flat",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Xin Jiang Huang Rou",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830514",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830514",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048729",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048729",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197470",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197470",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Xinjiang, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "Yellow",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},			
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Xi Kang Bian Tao 1",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR1994369",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR1994369",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN03566829",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN03566829",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA281983",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA281983",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "Wild, Sichuan, China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "-",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			},
+			{
+				"name": [
+					{
+						"type": "text",
+						"label": "Zhou Xing Shan Tao",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"sra_id": [
+					{
+						"type": "text",
+						"label": "SRR830512",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/sra/?term=SRR830512",
+						"target": "_blank", "title":"Link to SRA repository",
+						"pedix": []
+					}
+				],
+				"biosample_id": [
+					{
+						"type": "text",
+						"label": "SAMN02048727",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN02048727",
+						"target": "_blank", "title":"Link to BioSample",
+						"pedix": []
+					}
+				],
+				"bioproject_id": [
+					{
+						"type": "text",
+						"label": "PRJNA197468",
+						"color": "blue",
+						"url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA197468",
+						"target": "_blank", "title":"Link to BioProject",
+						"pedix": []
+					}
+				],
+				"nation": [
+					{
+						"type": "text",
+						"label": "China",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"skin_h": [
+					{
+						"type": "text",
+						"label": "Peach",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_shape": [
+					{
+						"type": "text",
+						"label": "Round",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"fruit_flesh_color": [
+					{
+						"type": "text",
+						"label": "White",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_adhesion": [
+					{
+						"type": "text",
+						"label": "Freestone",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_firmness": [
+					{
+						"type": "text",
+						"label": "Melting",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flesh_taste": [
+					{
+						"type": "text",
+						"label": "Acid",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_type": [
+					{
+						"type": "text",
+						"label": "Single",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				],
+				"flower_shape": [
+					{
+						"type": "text",
+						"label": "Showy",
+						"color": "black",
+						"url": "",
+						"target": "",
+						"pedix": []
+					}
+				]
+			}
+		]
+}

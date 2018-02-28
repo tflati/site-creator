@@ -1,0 +1,85 @@
+<md-toolbar class="md-primary">
+	<div class="md-toolbar-tools">
+		<h2 flex md-truncate>{{container.title}}</h2>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteContainer()">	
+			<ng-md-icon icon="delete" style="fill: white"></ng-md-icon> 
+		</md-button>
+		<md-button class="md-icon-button" aria-label="Favorite" ng-click="showContainer()">
+			<ng-md-icon ng-show="visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+			<ng-md-icon ng-show="visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+		</md-button>
+	</div>
+</md-toolbar>
+<md-content ng-show="visibility" class="md-whiteframe-4dp myform" flex layout-padding>	
+	<md-input-container class="md-block">
+		<label>Title</label>
+		<input ng-model="container.title" style="color:black;">
+	</md-input-container>
+	
+	<md-input-container class="md-block">
+		<label>Url</label>
+		<input ng-model="container.url" style="color:black;">
+	</md-input-container>
+	
+	<md-input-container class="md-block" flex-gt-sm>
+		<label>Show Header?</label>
+		<md-select name="type" ng-model="container.show_header">
+			<md-option value="small">Small</md-option>
+			<md-option value="normal">Normal</md-option>
+			<md-option value="hidden">Hidden</md-option>
+		</md-select>
+		<md-switch ng-model="container.show_long_description">
+			Show long description?
+		</md-switch>
+		<md-switch ng-model="container.show_logos">
+			Show logos?
+		</md-switch>
+	</md-input-container>	
+	
+	<b>Elements</b><br><br>
+	<div ng-repeat="element in container.elements">
+		<div ng-switch="element.type">
+			<div ng-switch-when="chart">
+				<my-chart my-element="element" action="showDeleteElementDialog('Are you sure to delete the chart ' + element.label + '?',container.elements,$index)"></my-chart>
+			</div>
+			<div ng-switch-when="datatable">
+				<my-data-table my-element="element" action="showDeleteElementDialog('Are you sure to delete the datatable ' + element.label + '?',container.elements,$index)"></my-data-table>
+			</div>
+			<div ng-switch-when="form">
+				<my-form my-element="element" action="showDeleteElementDialog('Are you sure to delete the form ' + element.label + '?',container.elements,$index)"></my-form>
+			</div>
+			<div ng-switch-when="iframe">
+				<my-i-frame my-element="element" action="showDeleteElementDialog('Are you sure to delete the iframe ' + element.label + '?',container.elements,$index)"></my-i-frame>
+			</div>
+			<div ng-switch-when="ptree">
+				<my-p-tree my-element="element" action="showDeleteElementDialog('Are you sure to delete the phylogenetic tree ' + element.label + '?',container.elements,$index)"></my-p-tree>
+			</div>
+			<div ng-switch-when="slider">
+				<my-slider my-element="element" action="showDeleteElementDialog('Are you sure to delete the slider ' + element.label + '?',container.elements,$index)"></my-slider>
+			</div>
+			<div ng-switch-when="text">
+				<my-text my-element="element" action="showDeleteElementDialog('Are you sure to delete the text ' + element.label + '?',container.elements,$index)"></my-text>
+			</div>
+			<div ng-switch-when="customlist">
+				<my-list my-element="element" action="showDeleteElementDialog('Are you sure to delete the list ' + element.label + '?',container.elements,$index)"></my-list>
+			</div>
+			<div ng-switch-when="button_group">
+				<my-button-group-item my-element="element" action="showDeleteElementDialog('Are you sure to delete the button group item ' + element.label + '?',container.elements,$index)"></my-button-group-item>
+			</div>
+			<div ng-switch-when="venn">
+				<my-venn my-element="element" action="showDeleteElementDialog('Are you sure to delete the venn diagram ' + element.label + '?',container.elements,$index)"></my-venn>
+			</div>
+			<div ng-switch-when="wordcloud">
+				<my-word-cloud my-element="element" action="showDeleteElementDialog('Are you sure to delete the word cloud ' + element.label + '?',container.elements,$index)"></my-word-cloud>
+			</div>
+			<div ng-switch-default> <!-- image -->
+				<my-image my-element="element" action="showDeleteElementDialog('Are you sure to delete the image ' + element.label + '?',container.elements,$index)"></my-image>
+			</div>
+		</div>
+	</div>
+	
+	<div align="right">
+		<md-button class="md-raised md-primary" ng-click="showAddElementDialog($event)">Add Element</md-button>
+	</div>
+</md-content>
+<br>

@@ -1,0 +1,178 @@
+<md-dialog>
+	<form ng-cloak>
+		<md-toolbar>
+		  <div class="md-toolbar-tools">
+			<h2>Add Element</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<ng-md-icon icon="close" style="fill: white"></ng-md-icon> 
+			</md-button>
+		  </div>
+		</md-toolbar>
+
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<p><b>Add one or more element to container</b></p>
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customBG">
+							Button group
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of button group</label>
+						<input type="number" ng-model="choices.customBGN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.chart">
+							Chart
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of chart</label>
+						<input type="number" ng-model="choices.chartN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>		
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.datatable">
+							Datatable
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of datatable</label>
+						<input type="number" ng-model="choices.datatableN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customForm">
+							Form
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of form</label>
+						<input type="number" ng-model="choices.customFormN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customFrame">
+							Iframe
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of iframe</label>
+						<input type="number" ng-model="choices.customFrameN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customImage">
+							Image
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of image</label>
+						<input type="number" ng-model="choices.customImageN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customList">
+							List
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of list</label>
+						<input type="number" ng-model="choices.customListN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customPTree">
+							Phylogenetic tree
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of tree</label>
+						<input type="number" ng-model="choices.customPTreeN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customSlider">
+							Slider
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of slider</label>
+						<input type="number" ng-model="choices.customSliderN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customText">
+							Text
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of text</label>
+						<input type="number" ng-model="choices.customTextN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customVenn">
+							Venn Diagram
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of venn</label>
+						<input type="number" ng-model="choices.customVennN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+				<div layout="row" layout-align="center center" flex>
+					<div flex="50" >
+						<md-checkbox ng-model="choices.customWCloud">
+							Word Cloud
+						</md-checkbox>
+					</div>
+					<div flex="50">
+						<md-input-container class="md-block" flex-gt-sm>
+						<label># of cloud</label>
+						<input type="number" ng-model="choices.customWCloudN" step="1" min="1" max="5">
+					</md-input-container>
+					</div>
+				</div>	
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<md-button class="md-raised md-primary" ng-click="answer(choices)">Add</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

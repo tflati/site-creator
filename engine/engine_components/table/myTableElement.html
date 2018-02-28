@@ -1,0 +1,156 @@
+<!--<md-card>-->
+	<md-card-title>
+		<md-card-title-text>
+			<span class="md-headline">{{myElement.label}}</span>
+		</md-card-title-text>
+	</md-card-title>
+	<md-card-content  flex>
+	
+		<span align="justify" class="md-padding" ng-bind-html="myElement.description"></span>
+		<!-- FILTER -->
+		<div ng-show="filter_list.length > 0">
+			<md-toolbar class="md-primary">
+				<div class="md-toolbar-tools">
+					<h2 flex md-truncate>Filter</h2>
+					<md-button class="md-icon-button" aria-label="Favorite" ng-click="showFilter()">
+						<ng-md-icon ng-show="filter_visibility == false" icon="keyboard_arrow_down" style="fill: white"></ng-md-icon> 
+						<ng-md-icon ng-show="filter_visibility == true" icon="keyboard_arrow_up" style="fill: white"></ng-md-icon> 
+					</md-button>
+				</div>
+			</md-toolbar>
+			<md-content ng-show="filter_visibility" class="md-whiteframe-4dp myform" layout-padding>	
+				<div ng-repeat="filter_obj in filter_list">
+					<b>{{filter_obj.title}}</b>
+					<div layout-gt-sm="row">
+						<div ng-repeat="filter in filter_obj.filters">
+							<div ng-switch="filter.type">
+							
+								<div ng-switch-when="text"> 
+									<md-input-container class="md-block" flex-gt-sm>
+										<label>{{formatFilterLabel(filter_obj.label)}}</label>
+										<input ng-model="filter.chosen_value">
+									</md-input-container>
+								</div>
+								
+								<div ng-switch-when="number"> 
+									<div layout-gt-sm="row">	
+										<md-input-container  class="md-block" flex-gt-sm>
+											<label>Operator</label>
+											<md-select name="type" ng-model="filter.operators" >
+												<md-option value="<"> &lt; </md-option>
+												<md-option value=">"> &gt;</md-option>
+												<md-option value="<="> &#8804; </md-option>
+												<md-option value=">="> &#8805; </md-option>
+												<md-option value="="> = </md-option>
+												<md-option value="!="> &ne; </md-option>
+											</md-select>
+										</md-input-container>
+										<md-input-container  class="md-block" flex-gt-sm>
+											<label>{{formatFilterLabel(filter_obj.label)}}</label>
+											<input type="number" step="{{filter.step}}" ng-model="filter.chosen_value" min="{{filter.min}}" max="{{filter.max}}" />
+										</md-input-container>	
+									</div>
+								</div>
+								
+								<div ng-switch-when="radio"> 
+									<br>
+									<md-radio-group ng-model="filter.chosen_value">
+										<md-radio-button ng-repeat="radio in filter.values" ng-value="radio" required>{{radio}}</md-radio-button>
+									</md-radio-group>
+								</div>
+								
+								<div ng-switch-when="select"> 
+									<md-input-container>
+										<label>{{formatFilterLabel(filter_obj.label)}}</label>
+
+										<div ng-if="filter.multiple == false">
+											<md-select ng-model="filter.chosen_value">
+												<md-option ng-repeat="element in filter.values" ng-value="element">{{element}}</md-option>
+											</md-select>
+										</div>
+										<div ng-if="filter.multiple == true">
+											<md-select ng-model="filter.chosen_value" multiple>
+												<md-option ng-repeat="element in filter.values" ng-value="element">{{element}}</md-option>
+											</md-select>
+										</div>
+									</md-input-container>
+								</div>
+								
+								<div ng-switch-when="checkbox"> 		
+									<md-checkbox ng-model="filter.chosen_value">
+										{{filter.message}}
+									</md-checkbox>									
+								</div>
+								
+								<div ng-switch-when="fieldset">
+									<fieldset>
+									    <div layout="row" layout-wrap flex>
+											<div ng-repeat="item in filter.values">
+												<md-checkbox ng-checked="exists(item, filter.chosen_value)" ng-click="toggle(item, filter.chosen_value)" style="">
+													<span style = "padding-right:0.5cm">{{ item }}</span>
+												</md-checkbox>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								
+								<div ng-switch-when="number_range"> 
+									<div layout-gt-sm="row" layout-align="center bottom">	
+										<md-input-container  class="md-block" flex-gt-sm>
+											<!--<label>{{formatFilterLabel(filter_obj.label)}}</label>-->
+											<input type="number" step="{{filter.step1}}" ng-model="filter.chosen_value1" min="{{filter.min1}}" max="{{filter.max1}}" />
+										</md-input-container>	
+										<md-input-container  class="md-block" flex-gt-sm>
+											<!--<label>Operator</label>-->
+											<md-select name="type" ng-model="filter.operators1" >
+												<md-option value="<"> &lt; </md-option>
+												<md-option value="<="> &#8804; </md-option>
+											</md-select>
+										</md-input-container>
+										<p style="padding-left: 10px; padding-right: 10px;">{{filter.text}}</p>
+										<md-input-container  class="md-block" flex-gt-sm>
+											<!--<label>Operator</label>-->
+											<md-select name="type" ng-model="filter.operators2" >
+												<md-option value="<"> &lt; </md-option>
+												<md-option value="<="> &#8804; </md-option>
+											</md-select>
+										</md-input-container>
+										<md-input-container  class="md-block" flex-gt-sm>
+											<!--<label>{{formatFilterLabel(filter_obj.label)}}</label>-->
+											<input type="number" step="{{filter.step2}}" ng-model="filter.chosen_value2" min="{{filter.min2}}" max="{{filter.max2}}" />
+										</md-input-container>	
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div align="right">
+					<md-button class="md-raised md-warn" ng-click="resetFilter();applyFilter();">Reset</md-button>
+					<md-button class="md-raised md-primary" ng-click="applyFilter();">Search</md-button>
+				</div>
+			</md-content>
+		</div>
+		<br> 
+			
+		<!-- *************************************** -->
+		<!-- DATA TABLE -->
+		<mdt-table 	
+				paginated-rows="{isEnabled: usePagination, rowsPerPageValues: rowList}"
+				mdt-row-paginator="paginatorCallback(page, pageSize, options)"
+				mdt-trigger-request="getLoadResultsCallback(loadPageCallback)"
+				mdt-row-paginator-error-message="Error happened during loading nutritions."
+				mdt-row="t_property">
+			<mdt-header-row ng-repeat="column in t_column" ng-if="useHeader">  
+				<mdt-column align-rule="center" column-definition="{{column.tooltip}}" >{{column.header}}</mdt-column>
+			</mdt-header-row>
+			
+			<div ng-repeat="field in table_data.structure.field_list">
+				<mdt-custom-cell column-key={{field.label}}>
+					<my-custom-element my-element-c="value"></my-custom-element>
+				</mdt-custom-cell>
+			</div>
+		</mdt-table>
+	</md-card-content>
+<!--</md-card>-->

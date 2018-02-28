@@ -1,0 +1,25 @@
+<md-dialog>
+	<md-toolbar>
+	  <div class="md-toolbar-tools">
+		<h2>Example</h2>
+		<span flex></span>
+		<md-button class="md-icon-button" ng-click="cancel()">
+			<ng-md-icon icon="close" style="fill: white"></ng-md-icon> 
+		</md-button>
+	  </div>
+	</md-toolbar>
+	<md-dialog-content>
+		<div class="md-dialog-content">
+			<div ng-switch="locals.header_type">
+				<div ng-switch-when="normal">
+					<center><h2>Normal header</h2></center>
+					<img style="max-width: 100%;" src="css/img/normal_header.png" >
+				</div>
+				<div ng-switch-when="widescreen">
+					<center><h2>Widescreen header</h2></center>
+					<img style="margin: auto; max-width: 100%;" src="css/img/widescreen_header.png">
+				</div>
+			</div>
+		</div>
+	</md-dialog-content>
+</md-dialog>

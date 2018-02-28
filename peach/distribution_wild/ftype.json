@@ -1,0 +1,83 @@
+{
+	"structure": {
+		"field_list": [
+			{
+				"label": "flower_type",
+				"header": "Flower type",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			},
+			{
+				"label": "number",
+				"header": "#",
+				"tooltip": "",
+				"filters": {
+					"title": "",
+					"list": []
+				},
+				"chart": true
+			}
+		]
+	},
+	"total": "3",
+	"hits": [
+		{
+		    "flower_type": [
+				{
+					"type": "text",
+					"label": "Single",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "13"
+				}
+			]
+		},
+		{
+		    "flower_type": [
+				{
+					"type": "text",
+					"label": "Double",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "1"
+				}
+			]
+		},
+		{
+		    "flower_type": [
+				{
+					"type": "text",
+					"label": "N/A",
+					"color": "black",
+					"url": "",
+					"target": "",
+					"pedix": []
+				}
+			],
+			"number": [
+				{
+					"type": "number",
+					"value": "6"
+				}
+			]
+		}
+	]
+}
