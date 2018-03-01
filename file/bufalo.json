@@ -171,7 +171,7 @@
     "layout": {
         "selected": {
             "type": "item",
-            "id": 1
+            "id": 5
         },
         "templates": [
             {
@@ -187,7 +187,7 @@
                 "type": "container",
                 "type_name": "grid2",
                 "label": "Grid 2 columns",
-                "id": 2,
+                "id": 3,
                 "columns": [
                     [],
                     []
@@ -278,12 +278,24 @@
             ],
             "4": [
                 {
-                    "type": "item",
-                    "id": 5
-                },
-                {
-                    "type": "item",
-                    "id": 6
+                    "type": "container",
+                    "type_name": "grid2",
+                    "label": "Grid 2 columns",
+                    "id": 2,
+                    "columns": [
+                        [
+                            {
+                                "type": "item",
+                                "id": 5
+                            }
+                        ],
+                        [
+                            {
+                                "type": "item",
+                                "id": 6
+                            }
+                        ]
+                    ]
                 }
             ]
         }
