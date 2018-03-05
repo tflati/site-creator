@@ -25,27 +25,27 @@
             },
             {
                 "name": "Search",
-                "url": "#search",
+                "url": "",
                 "submenu": [
                     {
                         "name": "Search by fold change value",
-                        "url": "#"
+                        "url": "#search_by_fold_change_value"
                     },
                     {
                         "name": "Search by gene feature",
-                        "url": "#"
+                        "url": "#search_by_gene_feature"
                     },
                     {
                         "name": "Search by Gene symbol",
-                        "url": "#"
+                        "url": "#search_by_gene_symbol"
                     },
                     {
                         "name": "Search by Tissue",
-                        "url": "#"
+                        "url": "#search_by_tissue"
                     },
                     {
                         "name": "Differential expression analysis",
-                        "url": "#"
+                        "url": "#differential_expression_analysis"
                     }
                 ]
             },
@@ -163,6 +163,69 @@
                         "type": "text",
                         "label": "CharBar Box - Needed an API",
                         "description": ""
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "title": "SearchByGeneSymbol",
+                "url": "#search_by_gene_symbol",
+                "show_header": "small",
+                "show_long_description": true,
+                "show_logos": true,
+                "elements": [
+                    {
+                        "id": 7,
+                        "type": "form",
+                        "label": "Search by Gene Symbol",
+                        "key": "search_by_gene_symbol_form",
+                        "description": "",
+                        "fields": [
+                            {
+                                "type": "select",
+                                "label": "First sample ID",
+                                "key": "first_sample_id",
+                                "autocomplete": true,
+                                "dynamic": true,
+                                "source_url": "\/api\/get_samples\/{first_sample_id}",
+                                "elements": [],
+                                "multiple": false,
+                                "required": true
+                            },
+                            {
+                                "type": "select",
+                                "label": "Second sample ID",
+                                "key": "second_sample_id",
+                                "autocomplete": true,
+                                "dynamic": true,
+                                "source_url": "\/api\/get_samples\/{second_sample_id}",
+                                "elements": [],
+                                "multiple": false,
+                                "required": true
+                            },
+                            {
+                                "type": "checkbox",
+                                "label": "Fold change",
+                                "key": "fold_change",
+                                "checked": false,
+                                "required": false
+                            },
+                            {
+                                "type": "number",
+                                "label": "Cutoff",
+                                "key": "cutoff",
+                                "hint": "",
+                                "default_value": "",
+                                "min_value": "",
+                                "max_value": "",
+                                "step_dimension": "",
+                                "required": false
+                            }
+                        ],
+                        "submit": {
+                            "label": "Submit",
+                            "url": "\/api\/search_by_gene_symbol\/"
+                        }
                     }
                 ]
             }
@@ -296,6 +359,12 @@
                             }
                         ]
                     ]
+                }
+            ],
+            "5": [
+                {
+                    "type": "item",
+                    "id": 7
                 }
             ]
         }
